@@ -1,4 +1,6 @@
-Fix: Correct Tailwind CSS integration and remove unused dependency
+Refactor: Update image paths and Tailwind CSS integration
 
-- Replaced `@import "tailwindcss";` with `@tailwind` directives in `src/styles/global.css`.
-- Removed `@tailwindcss/vite` dependency from `package.json`.
+- Corrected image paths in various .astro files to use root-relative paths.
+- Removed CDN link for Tailwind CSS from all .astro files.
+- Created `tailwind.config.cjs` for proper Tailwind CSS integration.
+- Updated `global.css` to use `@tailwind` directives.
