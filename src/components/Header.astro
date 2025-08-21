@@ -1,0 +1,124 @@
+
+        <header class="absolute top-0 left-0 right-0 z-10 p-8 transition-all duration-300" id="main-header">
+  <div class="container mx-auto flex justify-between items-center">
+    <a class="text-2xl font-bold tracking-wider text-white" href="/"
+      ><img
+        src="../../public/image/Logo.png"
+        class="w-[120px]"
+        alt="çitlembik logo"
+      />
+    </a>
+    <nav class="hidden md:flex space-x-8">
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/">Anasayfa</a
+      >
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/hakkimizda">Hakkımızda</a
+      >
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/hizmetler">Hizmetler</a
+      >
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/portfolio">Portföy</a
+      >
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/blog">Blog</a
+      >
+      <a
+        class="text-white hover:text-[var(--accent-color)] transition-colors duration-300"
+        href="/iletisim">İletişim</a
+      >
+    </nav>
+    <button id="menu-toggle" class="md:hidden text-white">
+      <svg
+        class="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          d="M4 6h16M4 12h16M4 18h16"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"></path></svg
+      >
+    </button>
+  </div>
+  
+  <!-- Mobil Menü -->
+  <!-- Arka plan -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-90 z-60 hidden"></div>
+  <!-- Menü içeriği -->
+  <div id="mobile-menu" class="fixed inset-0 z-60 hidden flex items-center justify-center transition-opacity duration-300 opacity-0">
+    <button id="close-menu" class="absolute top-8 right-8 text-white text-3xl">
+      &times;
+    </button>
+    <div class="flex flex-col gap-10 justify-center items-center">
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/">Anasayfa</a>
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/hakkimizda">Hakkımızda</a>
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/hizmetler">Hizmetler</a>
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/portfolio">Portföy</a>
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/blog">Blog</a>
+      <a class="text-white text-2xl hover:text-[var(--accent-color)] transition-colors duration-300" href="/iletisim">İletişim</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobil menü açma ve kapama
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+  const header = document.getElementById('main-header');
+
+  if(menuToggle && mobileMenu && closeMenu && mobileMenuBackdrop) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBackdrop.classList.remove('hidden');
+      // Butonları gizle
+      const floatingButtons = document.getElementById('floating-buttons');
+      if(floatingButtons) {
+        floatingButtons.style.display = 'none';
+      }
+      setTimeout(() => {
+        mobileMenu.classList.remove('opacity-0');
+      }, 10);
+    });
+
+    const closeMobileMenu = () => {
+      mobileMenu.classList.add('opacity-0');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBackdrop.classList.add('hidden');
+        // Butonları tekrar göster
+        const floatingButtons = document.getElementById('floating-buttons');
+        if(floatingButtons) {
+          floatingButtons.style.display = 'flex';
+        }
+      }, 300);
+    };
+
+    closeMenu.addEventListener('click', closeMobileMenu);
+    mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Header arka plan rengi değişimi
+  if(header) {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 100) {
+        header.classList.add('bg-[#5c6670]');
+        header.classList.add('bg-opacity-90');
+                      header.classList.add('fixed');
+      } else {
+        header.classList.remove('bg-[#5c6670]');
+        header.classList.remove('bg-opacity-90');
+      }
+    });
+  }
+</script>

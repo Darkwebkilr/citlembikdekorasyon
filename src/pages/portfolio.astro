@@ -1,0 +1,247 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Buttons from "../components/Buttons.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Portföy | Çitlembik Dekorasyon">
+  <html lang="tr">
+    <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Portföy | Çitlembik Dekorasyon</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
+      <style type="text/tailwindcss">
+        :root {
+          --primary-color: #5c6670;
+          --secondary-color: #fdfdfb;
+          --background-color: #f3f3f1;
+          --text-primary: #1c1c1c;
+          --text-secondary: #5c6670;
+          --accent-color: #eae8e4;
+        }
+        body {
+          font-family: "Work Sans", sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Playfair Display", serif;
+        }
+      </style>
+    </head>
+    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<Buttons/>
+      <div
+        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      >
+<Header/>
+        <main class="flex-grow">
+          <!-- Portföy Başlık -->
+          <section class="relative py-20 md:py-32 bg-[#F8F7F5]">
+            <div class="container mx-auto px-4 text-center">
+              <h1 class="text-4xl md:text-6xl font-bold mb-6">Portföyümüz</h1>
+              <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
+                25 yıldır hayata geçirdiğimiz özel projeler
+              </p>
+            </div>
+          </section>
+
+          <!-- Kategori Filtreleri -->
+          <section class="container mx-auto px-4 py-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+              <button class="px-6 py-2 bg-[var(--accent-color)] text-[var(--text-primary)] rounded-full font-medium hover:bg-[var(--text-primary)] hover:text-white transition-colors">
+                Tümü
+              </button>
+              <button class="px-6 py-2 bg-white text-[var(--text-primary)] rounded-full font-medium border border-[var(--accent-color)] hover:bg-[var(--accent-color)] transition-colors">
+                Modern
+              </button>
+              <button class="px-6 py-2 bg-white text-[var(--text-primary)] rounded-full font-medium border border-[var(--accent-color)] hover:bg-[var(--accent-color)] transition-colors">
+                Klasik
+              </button>
+              <button class="px-6 py-2 bg-white text-[var(--text-primary)] rounded-full font-medium border border-[var(--accent-color)] hover:bg-[var(--accent-color)] transition-colors">
+                Minimalist
+              </button>
+              <button class="px-6 py-2 bg-white text-[var(--text-primary)] rounded-full font-medium border border-[var(--accent-color)] hover:bg-[var(--accent-color)] transition-colors">
+                Eklektik
+              </button>
+              <button class="px-6 py-2 bg-white text-[var(--text-primary)] rounded-full font-medium border border-[var(--accent-color)] hover:bg-[var(--accent-color)] transition-colors">
+                Ofis
+              </button>
+            </div>
+
+            <!-- Proje Galerisi -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Proje 1 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Lüks Modern Villa" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Lüks Modern Villa</h3>
+                      <p>İstanbul / Bebek</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Lüks Modern Villa</h3>
+                  <p class="text-gray-600 mb-4">İstanbul / Bebek</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+
+              <!-- Proje 2 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Klasik Şıklıkla Yenilenmiş Daire" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Klasik Şıklıkla Yenilenmiş Daire</h3>
+                      <p>İstanbul / Nişantaşı</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Klasik Şıklıkla Yenilenmiş Daire</h3>
+                  <p class="text-gray-600 mb-4">İstanbul / Nişantaşı</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+
+              <!-- Proje 3 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Minimalist Mutfak Tasarımı" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Minimalist Mutfak Tasarımı</h3>
+                      <p>Ankara / Çankaya</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Minimalist Mutfak Tasarımı</h3>
+                  <p class="text-gray-600 mb-4">Ankara / Çankaya</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+
+              <!-- Proje 4 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1600194996164-009281c4043b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Şık Ev Ofisi Tasarımı" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Şık Ev Ofisi Tasarımı</h3>
+                      <p>İzmir / Karşıyaka</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Şık Ev Ofisi Tasarımı</h3>
+                  <p class="text-gray-600 mb-4">İzmir / Karşıyaka</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+
+              <!-- Proje 5 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Bahçe Restoran Dekorasyonu" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Bahçe Restoran Dekorasyonu</h3>
+                      <p>Antalya / Lara</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Bahçe Restoran Dekorasyonu</h3>
+                  <p class="text-gray-600 mb-4">Antalya / Lara</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+
+              <!-- Proje 6 -->
+              <div class="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div class="relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Lüks Boutique Otel" 
+                    class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold mb-2">Lüks Boutique Otel</h3>
+                      <p>Muğla / Bodrum</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 bg-white">
+                  <h3 class="text-xl font-bold mb-2">Lüks Boutique Otel</h3>
+                  <p class="text-gray-600 mb-4">Muğla / Bodrum</p>
+                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                    Detayları İncele →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sayfalama -->
+            <div class="flex justify-center mt-12">
+              <nav class="flex items-center space-x-2">
+                <a href="#" class="px-4 py-2 rounded-md bg-[var(--accent-color)] text-[var(--text-primary)] font-medium">1</a>
+                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">2</a>
+                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">3</a>
+                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">Sonraki →</a>
+              </nav>
+            </div>
+          </section>
+        </main>
+      </div>
+    <Footer />
+
+    </body>
+  </html>
+</Layout>

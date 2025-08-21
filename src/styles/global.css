@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  /* Animasyon süreleri */
+  --typing-duration-desktop: 2s;
+  --typing-duration-mobile: 1.5s;
+  --typing-delay-line2-desktop: 1s;
+  --typing-delay-line2-mobile: 0.8s;
+  --typing-delay-line3-desktop: 2s;
+  --typing-delay-line3-mobile: 1.6s;
+  
+  /* Diğer değişkenler */
+  --primary-color: #5c6670;
+  --secondary-color: #fdfdfb;
+  --background-color: #f3f3f1;
+  --text-primary: #1c1c1c;
+  --text-secondary: #5c6670;
+  --accent-color: #eae8e4;
+}
+
+/* Animasyonlar */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpChildren {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+[data-animate="slide-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+[data-animate="slide-up"].animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+[data-animate-children="slide-up"] > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-animate-children="slide-up"].animate-children > * {
+  animation: slideUpChildren 0.6s ease-out forwards;
+}
+
+[data-animate-children="slide-up"].animate-children > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+[data-animate-children="slide-up"].animate-children > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+[data-animate-children="slide-up"].animate-children > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+[data-animate-children="slide-up"].animate-children > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+[data-animate-children="slide-up"].animate-children > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Header */
+#main-header {
+  transition: background-color 0.3s ease;
+}
+
+/* Hero arka plan animasyonu */
+.hero-background {
+  animation: heroZoom 1.5s ease-out forwards;
+}
+
+/* Yazı yazma animasyonu */
+.typewriter-line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .05em;
+  width: 0;
+}
+
+.typewriter-line:nth-child(2) {
+  animation-delay: var(--typing-delay-line2-desktop);
+}
+
+.typewriter-line:nth-child(3) {
+  animation-delay: var(--typing-delay-line3-desktop);
+}
+
+/* 480px altı çözünürlükler için */
+@media (max-width: 480px) {
+  .typewriter-line {
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.25;
+    animation: typing var(--typing-duration-mobile) steps(30, end) forwards;
+  }
+  
+  .typewriter-line:nth-child(2) {
+    animation-delay: var(--typing-delay-line2-mobile);
+  }
+  
+  .typewriter-line:nth-child(3) {
+    animation-delay: var(--typing-delay-line3-mobile);
+  }
+}
+

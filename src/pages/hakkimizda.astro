@@ -1,0 +1,246 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Buttons from "../components/Buttons.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Hakkımızda | Çitlembik Dekorasyon">
+  <html lang="tr">
+    <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Hakkımızda | Çitlembik Dekorasyon</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
+      <style type="text/tailwindcss">
+        :root {
+          --primary-color: #5c6670;
+          --secondary-color: #fdfdfb;
+          --background-color: #f3f3f1;
+          --text-primary: #1c1c1c;
+          --text-secondary: #5c6670;
+          --accent-color: #eae8e4;
+        }
+        body {
+          font-family: "Work Sans", sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Playfair Display", serif;
+        }
+      </style>
+    </head>
+    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<Buttons/>
+      <div
+        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      >
+<Header/>
+        <main class="flex-grow">
+          <!-- Hakkımızda Başlık -->
+          <section class="relative py-20 md:py-32 bg-[#F8F7F5]">
+            <div class="container mx-auto px-4 text-center">
+              <h1 class="text-4xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
+              <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
+                25 yıldır ev dekorasyonu ve özel tasarım mobilya sektöründe
+              </p>
+            </div>
+          </section>
+
+          <!-- Hikayemiz -->
+          <section class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row gap-12 items-center mb-20">
+              <div class="w-full lg:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Hikayemiz</h2>
+                <p class="text-gray-600 mb-6">
+                  1995 yılında kurulan Çitlembik Dekorasyon, İstanbul'da bir atölye ile başlayan yolculuğunda bugün Türkiye'nin dört bir yanına hizmet veren, alanında uzmanlaşmış bir iç mekan tasarım firması haline geldi.
+                </p>
+                <p class="text-gray-600 mb-6">
+                  Kurucumuz olan Mimar Ahmet Çitlembik'in "Yaşayan Mekanlar" anlayışıyla, her projeye özel özgün çözümler üretiyoruz. 25 yıllık tecrübe ile birikmiş bilgi ve birikimimizi, her yeni projemizde müşterilerimizin hayalini kurduğu yaşam alanlarını gerçekleştirmek için kullanıyoruz.
+                </p>
+                <p class="text-gray-600">
+                  Bugüne kadar binlerce özel ve kurumsal projeye imza atmış bulunuyoruz. Her projede müşteri memnuniyetini, kaliteyi ve estetiği ön planda tutarak çalışmalarımızı sürdürüyoruz.
+                </p>
+              </div>
+              <div class="w-full lg:w-1/2">
+                <img 
+                  src="https://images.unsplash.com/photo-1581382183377-81ceb0965640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                  alt="Çitlembik Dekorasyon Atölyesi" 
+                  class="w-full h-96 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            </div>
+
+            <!-- Misyon & Vizyon -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+              <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4 text-[var(--accent-color)]">Misyonumuz</h3>
+                <p class="text-gray-600">
+                  Yaşam alanlarını sadece güzel değil, aynı zamanda işlevsel ve kişisel hale getirerek, insanların evlerinde kendilerini daha iyi hissetmelerini sağlamaktır. Her projede müşteriye özel özgün çözümler geliştirerek, yaşam kalitesini artırmayı amaçlıyoruz.
+                </p>
+              </div>
+              <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4 text-[var(--accent-color)]">Vizyonumuz</h3>
+                <p class="text-gray-600">
+                  Türkiye'nin önde gelen iç mekan tasarım ve mobilya firmalarından biri olarak, yenilikçi ve sürdürülebilir çözümlerle sektörde fark yaratmak. Uluslararası platformlarda da tanınan, kalite ve estetik ile öne çıkan bir marka olmak.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ekibimiz -->
+            <div class="mb-20">
+              <h2 class="text-3xl font-bold mb-12 text-center">Yönetim Ekibimiz</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Kişi 1 -->
+                <div class="text-center">
+                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                      alt="Ahmet Çitlembik" 
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 class="text-xl font-bold">Mimar Ahmet Çitlembik</h3>
+                  <p class="text-[var(--accent-color)] mb-3">Kurucu & Baş Mimari</p>
+                  <p class="text-gray-600">
+                    30 yıllık mimarlık tecrübesi ile projelerin mimari yönünü yönetiyor. "Yaşayan Mekanlar" felsefesinin öncüsü.
+                  </p>
+                </div>
+
+                <!-- Kişi 2 -->
+                <div class="text-center">
+                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                      alt="Elif Yılmaz" 
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 class="text-xl font-bold">Mimar Elif Yılmaz</h3>
+                  <p class="text-[var(--accent-color)] mb-3">Yönetim Kurulu Üyesi</p>
+                  <p class="text-gray-600">
+                    İç mimarlık ve tasarım konularında 20 yıllık tecrübesi ile projelerin estetik yönünü yönlendiriyor.
+                  </p>
+                </div>
+
+                <!-- Kişi 3 -->
+                <div class="text-center">
+                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
+                    <img 
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                      alt="Mehmet Kaya" 
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 class="text-xl font-bold">Usta Mehmet Kaya</h3>
+                  <p class="text-[var(--accent-color)] mb-3">Üretim Müdürü</p>
+                  <p class="text-gray-600">
+                    25 yıllık marangozluk tecrübesi ile özel üretim mobilyaların üretim süreçlerini yönetiyor.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Değerlerimiz -->
+            <div class="bg-[#F8F7F5] rounded-xl p-8">
+              <h2 class="text-3xl font-bold mb-8 text-center">Değerlerimiz</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">Müşteri Odaklılık</h3>
+                    <p class="text-gray-600">
+                      Her müşterimizin ihtiyaçlarını ve hayallerini dikkatle dinleyerek, onlara özel çözümler geliştiriyoruz.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">Kalite</h3>
+                    <p class="text-gray-600">
+                      Kullandığımız her malzeme ve uyguladığımız her detay için en yüksek kalite standartlarını gözetiyoruz.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">İnovasyon</h3>
+                    <p class="text-gray-600">
+                      Sürekli olarak yeni teknolojileri ve tasarım trendlerini takip ederek yenilikçi çözümler sunuyoruz.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">Sürdürülebilirlik</h3>
+                    <p class="text-gray-600">
+                      Çevre dostu malzemeler ve yöntemler kullanarak gelecek nesillere sorumlu bir şekilde hizmet veriyoruz.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">Şeffaflık</h3>
+                    <p class="text-gray-600">
+                      Süreç boyunca tüm adımları açık ve anlaşılır bir şekilde paylaşarak müşteri güvenini kazanıyoruz.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2">Zamanında Teslim</h3>
+                    <p class="text-gray-600">
+                      Verdiğimiz sözleri tutarak projeleri zamanında ve eksiksiz olarak teslim ediyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    <Footer />
+
+    </body>
+  </html>
+</Layout>

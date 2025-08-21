@@ -1,0 +1,286 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Buttons from "../components/Buttons.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Hizmetler | Çitlembik Dekorasyon">
+  <html lang="tr">
+    <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Hizmetler | Çitlembik Dekorasyon</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
+      <style type="text/tailwindcss">
+        :root {
+          --primary-color: #5c6670;
+          --secondary-color: #fdfdfb;
+          --background-color: #f3f3f1;
+          --text-primary: #1c1c1c;
+          --text-secondary: #5c6670;
+          --accent-color: #eae8e4;
+        }
+        body {
+          font-family: "Work Sans", sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Playfair Display", serif;
+        }
+      </style>
+    </head>
+    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<Buttons/>
+      <div
+        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      >
+<Header/>
+        <main class="flex-grow">
+          <!-- Hizmetler Başlık -->
+          <section class="relative py-20 md:py-32 bg-[#F8F7F5]">
+            <div class="container mx-auto px-4 text-center">
+              <h1 class="text-4xl md:text-6xl font-bold mb-6">Uzmanlık Alanlarımız</h1>
+              <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
+                25 yıllık deneyimimizle sunduğumuz kapsamlı hizmetler
+              </p>
+            </div>
+          </section>
+
+          <!-- Hizmetler İçerik -->
+          <section class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+              <!-- Hizmet 1 -->
+              <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Özel Tasarım Mobilyalar" 
+                    class="w-full h-80 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-3xl font-bold mb-4">Özel Tasarım Mobilyalar</h2>
+                  <p class="text-gray-600 mb-6">
+                    Ev ve iş yerleriniz için birebir ölçülerek tasarlanan, eşsiz ve işlevsel mobilya koleksiyonlarımız. Her müşteriye özel üretim, kaliteli malzeme seçimi ve ustalıkla işlenmiş detaylarla yaşam alanlarınıza değer katıyoruz.
+                  </p>
+                  <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Birebir ölçüm ve tasarım
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Yüksek kaliteli doğal ahşaplar
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Modern ve klasik tarz seçenekleri
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      5 yıl garantili üretim
+                    </li>
+                  </ul>
+                  <a href="#" class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-6 rounded-md font-medium">
+                    Detaylı Bilgi
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hizmet 2 -->
+              <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="İç Mekan Tasarımı" 
+                    class="w-full h-80 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-3xl font-bold mb-4">İç Mekan Tasarımı</h2>
+                  <p class="text-gray-600 mb-6">
+                    Kullanıcı dostu, estetik ve işlevsel iç mekan çözümleri. Yaşam tarzınıza ve ihtiyaçlarınıza uygun kişiselleştirilmiş tasarım projeleriyle hayalinizdeki alanları gerçeğe dönüştürüyoruz.
+                  </p>
+                  <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      3D görselleştirme ile tasarım öncesi deneyim
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Klasik, modern ve eklektik tarz seçenekleri
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Proje süresince danışmanlık hizmeti
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Anahtar teslim çözümler
+                    </li>
+                  </ul>
+                  <a href="#" class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-6 rounded-md font-medium">
+                    Detaylı Bilgi
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hizmet 3 -->
+              <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Tam Ev Dekorasyonu" 
+                    class="w-full h-80 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-3xl font-bold mb-4">Tam Ev Dekorasyonu ve Tadilat</h2>
+                  <p class="text-gray-600 mb-6">
+                    Evinizin her köşesine bütüncül bir yaklaşım getirerek, anahtar teslim çözümlerle hayalinizdeki eve kavuşmanızı sağlıyoruz. Tasarımdan uygulamaya tüm süreçte yanınızdayız.
+                  </p>
+                  <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Mimari planlama ve düzenleme
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Elektrik, su ve doğalgaz tesisatı
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Boya, sıva ve kaplama işleri
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Mobilya ve dekorasyon entegrasyonu
+                    </li>
+                  </ul>
+                  <a href="#" class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-6 rounded-md font-medium">
+                    Detaylı Bilgi
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hizmet 4 -->
+              <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1600194996164-009281c4043b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
+                    alt="Ofis Tasarımı" 
+                    class="w-full h-80 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-3xl font-bold mb-4">Ofis ve Ticari Alan Tasarımı</h2>
+                  <p class="text-gray-600 mb-6">
+                    İş verimliliğini artıran, marka kimliğinizi yansıtan ve çalışan memnuniyetini gözeten ticari mekan çözümleri. Ofislerden mağazalara kapsamlı tasarım hizmetleri.
+                  </p>
+                  <ul class="space-y-2 mb-6">
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Ergonomik çalışma alanı tasarımı
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Marka kimliğiyle uyumlu tasarım
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      Akıllı ofis teknolojileri entegrasyonu
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-5 h-5 text-[var(--accent-color)] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      7/24 kullanım için dayanıklı malzemeler
+                    </li>
+                  </ul>
+                  <a href="#" class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-6 rounded-md font-medium">
+                    Detaylı Bilgi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- S.S.S. Bölümü -->
+            <div class="bg-[#F8F7F5] rounded-xl p-8 mb-20">
+              <h2 class="text-3xl font-bold mb-8 text-center">Sıkça Sorulan Sorular</h2>
+              <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="border-b border-gray-200 pb-6">
+                  <h3 class="text-xl font-semibold mb-2">Bir tasarım projesi ne kadar sürede tamamlanır?</h3>
+                  <p class="text-gray-600">
+                    Projenin kapsamına göre değişiklik gösterse de, ortalama bir ev iç mekanı projesi 3-6 hafta, tam ev dekorasyonu ise 2-4 ay arasında tamamlanmaktadır. Ticari projeler için süre özel olarak belirlenir.
+                  </p>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                  <h3 class="text-xl font-semibold mb-2">Özel mobilya üretiminde hangi malzemeleri kullanıyorsunuz?</h3>
+                  <p class="text-gray-600">
+                    Ürün türüne göre değişmek üzere; doğal katmerli ahşaplar, MDF, sunta, laminat, mermer, granit, cam ve metal gibi kaliteli malzemeleri kullanıyoruz. Tüm malzemelerimiz çevre dostu ve kalite sertifikalıdır.
+                  </p>
+                </div>
+                <div class="border-b border-gray-200 pb-6">
+                  <h3 class="text-xl font-semibold mb-2">Tasarım hizmetlerinize ne kadar ücret ödemem gerekir?</h3>
+                  <p class="text-gray-600">
+                    Tasarımlarımız birebir ölçüm ve ihtiyaç analizi üzerine yapılmaktadır. Bu nedenle detaylı fiyat teklifi için lütfen bizimle iletişime geçiniz. İlk görüşmeden sonra projenizin kapsamına göre özel teklif sunuyoruz.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Proje sürecinde danışmanlık hizmeti alabilir miyim?</h3>
+                  <p class="text-gray-600">
+                    Evet, projelerinizin her aşamasında profesyonel danışmanlık hizmeti sunuyoruz. İster bütüncül çözümlerle ister sadece tasarım aşamasında destek almak isteyin, uzman ekibimiz yanınızda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    <Footer />
+
+    </body>
+  </html>
+</Layout>

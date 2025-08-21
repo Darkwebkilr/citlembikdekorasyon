@@ -1,16 +1,551 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Buttons from "../components/Buttons.astro";
+import Header from "../components/Header.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Çitlembik Dekorasyon">
+  <html lang="tr">
+    <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <title>Çitlembik Dekorasyon</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+      ></script>
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
+      <style type="text/tailwindcss">
+        :root {
+          --primary-color: #5c6670;
+          --secondary-color: #fdfdfb;
+          --background-color: #f3f3f1;
+          --text-primary: #1c1c1c;
+          --text-secondary: #5c6670;
+          --accent-color: #eae8e4;
+        }
+        body {
+          font-family: "Work Sans", sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Playfair Display", serif;
+        }
+      </style>
+    </head>
+    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<Buttons/>
+      <div
+        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+      >
+<Header/>
+        <main class="flex-grow">
+          <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div
+              class="absolute inset-0 bg-cover bg-center hero-background"
+              style='background-image: linear-gradient(rgba(40, 40, 40, 0.4) 0%, rgba(40, 40, 40, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAC2oXzbDJvKrun6COYsgsQD36TV1WnotTFTGrP44SXdzSDzX28BKvdeIRiOs6sn3msagKo3grmbQTIhQ26L6hOQXqPf4n3F9aI8t6w-VB9E4C9CjRrRMU4cgkXuggFHZCo6JV0yftTRMJs3458g-pspy7Cm1KnO_Va-L3VAcJ1wgWSws0RxTA2tfUu8KxGUNXZJ1Iub0NeAsKOhx5gi2ulO5fou7eDPh7iGWCabWgjVT1ED5qiYEMoKiOTWwwsMPqrT6bsg8DB0O4");'
+            >
+            </div>
+            <div class="relative text-center text-white px-4">
+              <h1
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight"
+              >
+                <span class="block typewriter-line" data-text="25 Yıllık">25 Yıllık</span>
+                <span class="block typewriter-line" data-text="Deneyimle">Deneyimle</span>
+                <span class="block typewriter-line" data-text="Evlerinizi Şekillendiriyoruz">Evlerinizi Şekillendiriyoruz</span>
+              </h1>
+              <p
+                class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light leading-relaxed"
+              >
+                Çitlembik Dekorasyon olarak 25 yıldır ev sahiplerine özel çözümler sunuyor, yaşam alanlarını işlevsel ve estetik hale getiriyoruz.
+              </p>
+              <a
+                class="inline-block bg-white text-[var(--text-primary)] hover:bg-[var(--accent-color)] transition-all duration-300 ease-in-out text-base font-medium py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1"
+                href="#"
+              >
+                Hemen Teklif Alın
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <div class="container mx-auto px-4 py-16 overflow-y-scroll" data-animate-children="slide-up">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between"
+        >
+          <div class="lg:w-2/5 mb-12 lg:mb-0">
+            <p class="text-sm uppercase tracking-widest text-gray-500">Referans Projelerimiz</p>
+            <h1
+              class="text-4xl md:text-5xl font-bold text-gray-800 mt-4 mb-6 leading-tight"
+            >
+              25 Yıllık Deneyimimizle Yarattığımız Eserler
+            </h1>
+            <p class="text-gray-600 mb-8">
+              Her projede birikmiş tecrübemizi ve özgün tarzımızı yansıtarak, yaşam alanlarını sanat eserine dönüştürüyoruz.
+            </p>
+            <a
+              class="inline-block bg-transparent border border-gray-800 text-gray-800 py-3 px-8 hover:bg-gray-800 hover:text-white transition-colors duration-300"
+              href="#">TÜM PROJELERİMİZ</a
+            >
+          </div>
+          <div class="lg:w-1/2">
+            <div class="space-y-12">
+              <div class="flex items-start space-x-6">
+                <img
+                  alt="Modern Elegance Residence"
+                  class="w-40 h-40 object-cover rounded-lg shadow-md"
+                  src="../../public/image/1.webp"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                    Modern Zarafet Rezidansı
+                  </h3>
+                  <p class="text-gray-600 mb-4 text-sm">
+                    Sofistike ve çağdaş tasarımın mükemmel bir karışımı.
+                  </p>
+                  <a
+                    class="text-sm font-medium text-gray-800 border-b-2 border-gray-800 pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors duration-300"
+                    href="#">DAHA FAZLA BİLGİ EDİN</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-start space-x-6">
+                <img
+                  alt="Doğal Huzur Sığınağı"
+                  class="w-40 h-40 object-cover rounded-lg shadow-md"
+                  src="../../public/image/2.webp"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                    Doğal Huzur Sığınağı
+                  </h3>
+                  <p class="text-gray-600 mb-4 text-sm">
+                    Rahatlamayı teşvik eden doğal dokular ve havadar, açık
+                    alanlar.
+                  </p>
+                  <a
+                    class="text-sm font-medium text-gray-800 border-b-2 border-gray-800 pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors duration-300"
+                    href="#">DAHA FAZLA BİLGİ EDİN</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-start space-x-6">
+                <img
+                  alt="Büyük Villa Yenilemesi"
+                  class="w-40 h-40 object-cover rounded-lg shadow-md"
+                  src="../../public/image/3.webp"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                    Büyük Villa Yenilemesi
+                  </h3>
+                  <p class="text-gray-600 mb-4 text-sm">
+                    Nötr paletlere odaklanan sakinleştirici ve minimalist bir ev
+                    tasarımı.
+                  </p>
+                  <a
+                    class="text-sm font-medium text-gray-800 border-b-2 border-gray-800 pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors duration-300"
+                    href="#">DAHA FAZLA BİLGİ EDİN</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Hakkımızda-->
+
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-[#F8F7F5] group/design-root overflow-x-hidden"
+        data-animate-children="slide-up"
+      >
+        <div class="flex h-full grow flex-col">
+          <div class="px-4 md:px-10 lg:px-20 xl:px-40 py-16 lg:py-24">
+            <div class="mx-auto flex max-w-6xl flex-col items-center">
+              <h2
+                class="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12"
+              >
+                Uzmanlık Alanlarımız
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-1 gap-12 w-full">
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 bg-[var(--card-bg-color)] p-8 rounded-lg shadow-sm"
+                >
+                  <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold leading-tight mb-3">
+                      Özel Mobilya Seçimi
+                    </h3>
+                                          <p
+                        class="text-[var(--muted-text-color)] text-base leading-relaxed mb-6"
+                      >
+                        Benzersiz tarzınızı ve ihtiyaçlarınızı yansıtan özel
+                        mobilya parçaları seçiyoruz ve her ürünün alanınıza
+                        kusursuz bir şekilde uyum sağlamasını garanti ediyoruz.
+                      </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-12 px-6 bg-[var(--button-bg-color)] text-[var(--button-text-color)] text-sm font-medium transition-colors hover:bg-[var(--button-hover-bg-color)]"
+                    >
+                                              <span>Özel Mobilyaları Keşfedin</span>
+                    </button>
+                  </div>
+                  <div class="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
+                      style='background-image: url("../../public/image/4.webp");'
+                    >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 bg-[var(--card-bg-color)] p-8 rounded-lg shadow-sm"
+                >
+                  <div class="w-full md:w-1/2 h-64 md:h-80 order-1">
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD38bskHE3Pm6NHWyQwCIjkEoEsblqpeXk1YJP4zEUll1XJ7MBiEINhzQ0qGWz8iB54pPaa8udYkHtxMTC4NjVt1qiit990BUC4cxhpZus_P-zIoLH412qgyXiA6banKdjaScaBw16k_jEiztj7gV9dFhpL-_smLI71jkPZMO_pip38ua9EBsAWzoluzcUslEiFQUiV3HPEZfost0ZWZowbJj4-Mr7FMA_LpSSJyRgmn3-lY38boEmVNhvOWVpIlY2F_xnXM9iocQA");'
+                    >
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2 order-2">
+                    <h3 class="text-2xl font-semibold leading-tight mb-3">
+                      Bohem Eklektik İç Mekanlar
+                    </h3>
+                    <p
+                      class="text-[var(--muted-text-color)] text-base leading-relaxed mb-6"
+                    >
+                      Özgür ruhlu bir estetik benimseyin; dokuları, desenleri ve
+                      antikaları harmanlayarak canlı ve kişiselleştirilmiş bir
+                      ev yaratın.
+                    </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-12 px-6 bg-[var(--button-bg-color)] text-[var(--button-text-color)] text-sm font-medium transition-colors hover:bg-[var(--button-hover-bg-color)]"
+                    >
+                      <span>Bohem İç Mekanları Keşfedin</span>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 bg-[var(--card-bg-color)] p-8 rounded-lg shadow-sm"
+                >
+                  <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold leading-tight mb-3">
+                      Modern Minimalist Interiors
+                    </h3>
+                    <p
+                      class="text-[var(--muted-text-color)] text-base leading-relaxed mb-6"
+                    >
+                      Achieve a sleek, uncluttered look with our modern
+                      minimalist designs, focusing on clean lines, neutral
+                      tones, and functional elegance.
+                    </p>
+                    <button
+                      class="flex items-center justify-center rounded-md h-12 px-6 bg-[var(--button-bg-color)] text-[var(--button-text-color)] text-sm font-medium transition-colors hover:bg-[var(--button-hover-bg-color)]"
+                    >
+                      <span>View Minimalist Designs</span>
+                    </button>
+                  </div>
+                  <div class="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjc21Lhq62cuswxH9iYPN_DPyZAyV5tg3yQFC11sBInnvd3XOnxRpdpAh5jhZrM-Yl_rgtJdXjfvUQC-i0of_SgxTye2AV8ayx5rkHbHUO7WNhpdX8qkkE3jqszisLwiN5ShS4_ftpq7DfO0PM1MAiq19rWPJr8TKa2Bu67c9s5IPQk8W92bPlk7PmmAmiy5BzQYFRfAuM4XXjucPAg2S47WZAQXA-G870cMFgHQlZE1U2I9-WTB9Ac5wh4x9b9R3JGtwZ4EVZlnA");'
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Müşteri Yorumları -->
+      <div class="container mx-auto px-4 py-16 bg-gray-50" data-animate-children="slide-up">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Müşteri Yorumları</h2>
+          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Çitlembik Dekorasyon'a güvenen ve hizmetlerimizden memnun kalan müşterilerimizin görüşleri
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Yorum 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="flex items-center mb-4">
+              <!-- Rastgele profil resmi -->
+              <img src="https://i.pravatar.cc/100?u=ahmet" alt="Ahmet Yılmaz" class="w-12 h-12 rounded-full mr-4 object-cover" />
+              <div>
+                <h4 class="font-bold text-gray-800">Ahmet Yılmaz</h4>
+                <div class="flex text-yellow-400">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              Evinin tadilatını Çitlembik Dekorasyon'a yaptırdım. Her şey beklentilerimin çok üstündeydi. Tasarımları hem şık hem de işlevsel.
+            </p>
+          </div>
+
+          <!-- Yorum 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="flex items-center mb-4">
+              <!-- Rastgele profil resmi -->
+              <img src="https://i.pravatar.cc/100?u=elif" alt="Elif Demir" class="w-12 h-12 rounded-full mr-4 object-cover" />
+              <div>
+                <h4 class="font-bold text-gray-800">Elif Demir</h4>
+                <div class="flex text-yellow-400">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              Profesyonel yaklaşımı ve detaylara olan özeniyle çok memnun kaldım. Her şey zamanında ve bütçeye uygun şekilde tamamlandı.
+            </p>
+          </div>
+
+          <!-- Yorum 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="flex items-center mb-4">
+              <!-- Rastgele profil resmi -->
+              <img src="https://i.pravatar.cc/100?u=mehmet" alt="Mehmet Kaya" class="w-12 h-12 rounded-full mr-4 object-cover" />
+              <div>
+                <h4 class="font-bold text-gray-800">Mehmet Kaya</h4>
+                <div class="flex text-yellow-400">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              Evinin her köşesini yeniden tasarlamaları harikaydı. Artık evime çok daha fazla değer veriyorum. Teşekkürler Çitlembik!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 py-16" data-animate-children="slide-up">
+        <div class="flex items-center mb-4">
+          <div class="w-6 h-6 bg-black mr-2"></div>
+          <p class="text-sm tracking-widest">Blog</p>
+        </div>
+        <div class="flex justify-between items-center mb-12">
+          <h1 class="text-5xl font-bold">Popüler Yazılar</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col">
+            <img
+              alt="Modern kırmızı kanepeli, koyu gri duvarlı ve ahşap panelli şık bir oturma odası."
+              class="w-full h-80 object-cover mb-6"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAGPxgPM99ycrWPyKO18Xibz1oe6rO0C0n0aR-7epLtok5R-ixPBfIA6lN8Udk2bo5qoglsLPol39Dei6Ra5vSBbJDA0q1qaa2jKMCTnnYgj4IdOI6wfvDEXlaT_BjfLqt35qEfQB3LIB-b2DqTCLLRyleK9XZkQjnaZrgXRUrrAfCViipHGlhhiVorwvbzZYpFJGJ3--4bOrjNI7BXf2ggwQkYE8Z4ngdtxiJMNFq1WeC8PjHJKsbTckyasfAdZlb-dnmdNTY5Dc"
+            />
+            <h2 class="text-2xl font-semibold mb-4">Özel Mobilya Seçimi</h2>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Özel mobilya tasarımlarımız, zarafeti işlevsellikle birleştirerek
+              eviniz için zamansız parçalar yaratır.
+            </p>
+            <a
+              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
+              href="#">ŞİMDİ BAŞLAYIN</a
+            >
+          </div>
+          <div class="flex flex-col">
+            <img
+              alt="Hardal sarısı kanepeli, modern avizeli ve bitkili bohem tarzı bir oturma odası."
+              class="w-full h-80 object-cover mb-6"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpLDRNvjdZVLxfBMUpHy2DJ_fKhRXnKdE6yH65frKayN0gVongKx7CD3Vigog0gv9yzDaGplKZpP86AiOE5YEJhJbgtVrJV-q_LX1pMkqpHM1IGfLUTPpiT1CE6pXO9dLTr4gCPsT_TYl8uh8Doh_AZMeeB0ZnFd4KfW7cg-a3TSCOo4C4TIw8UTjzo-1XbRlnGVw7M80so79qVJTwcGjvfHgT24h0IkZ9IyPCYJNQ4C45uo9AP7_QCaWE_uAK-TgEaJDvqYL9Tv4"
+            />
+            <h2 class="text-2xl font-semibold mb-4">
+              Bohem Eklektik İç Mekanlar
+            </h2>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Yarattığımız her parça, mekanınızı zahmetsizce tamamlamak için
+              hazırlanmış bir sanat ve fayda birleşimidir.
+            </p>
+            <a
+              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
+              href="#">ŞİMDİ BAŞLAYIN</a
+            >
+          </div>
+          <div class="flex flex-col">
+            <img
+              alt="Yeşil kanepeli, sarı örtülü ve galeri duvarlı minimalist bir oturma odası."
+              class="w-full h-80 object-cover mb-6"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIv8msYmVrjfjERYPB-PojQtYd2O-9i6l5VVpk6TQNHai1Aoo-BWgmD9J5QgKjLPTJNHbEsALlSYx8zYhD_4F3gFIkM-c2CrFGBrdr_iKXlXklAW3XNe1Tut7xsia3Addzf_aOcLzngjR54EYoky4S0CVC8z9TN528Ec1GavsOaS9LVyH2G7ZZ7IDdTMNzmt15YuHO7-98vxtgM1Dii7H4bG_-Nz4xJs9lTcguLBopN36NFzGXgsqiSHfAwdZFoELHvyMUqjUZZMo"
+            />
+            <h2 class="text-2xl font-semibold mb-4">
+              Modern Minimalist İç Mekanlar
+            </h2>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Misyonumuz, sadece çarpıcı görünmekle kalmayıp aynı zamanda
+              ihtiyaçlarınıza kusursuz bir şekilde hizmet eden mobilyalar
+              tasarlamaktır.
+            </p>
+            <a
+              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
+              href="#">ŞİMDİ BAŞLAYIN</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="flex bg-[#F8F7F5] min-h-screen items-center justify-center" data-animate="slide-up">
+        <div class="w-full px-4 py-16 ">
+          <div class="text-center">
+            <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
+              Hakkımızda
+            </h1>
+            <p
+              class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-[var(--text-secondary)]"
+            >
+              25 yıldır süregelen tecrübemizle, tasarımın sadece görsel bir yönü olmadığını; yaşam kalitenizi artıran, ihtiyaçlarınıza özel çözümler ürettiğimizi biliyoruz. Deneyimli tasarımcı ekibimiz, yaratıcılığı işlevsellikle harmanlayarak, her projeye özgün ve kişiye özel çözümler sunar. Mükemmelliğe, yeniliğe ve müşteri memnuniyetine olan bağlılığımızla, her projede tasarım tutkumuzu ve detaylara olan özenimizi yansıtmaktayız.
+            </p>
+            <div class="mt-10">
+              <a 
+                href="/hakkimizda" 
+                class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-8 rounded-md font-medium text-lg"
+              >
+                Daha Fazla Bilgi
+              </a>
+            </div>
+          </div>
+        </div>
+            </div>
+    <Footer data-animate="slide-up" />
+    </body>
+  </html>
+</Layout>
+
+<script>
+  document.body.style.scrollBehavior = "smooth";
+
+  // Animasyonları sıralı olarak başlat
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('[data-animate="slide-up"]');
+    const parentElements = document.querySelectorAll('[data-animate-children="slide-up"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-up');
+          
+          // Eğer elementin içindeki çocuklar için de animasyon varsa
+          if (entry.target.hasAttribute('data-animate-children')) {
+            // Kısa bir gecikme sonra çocuklara animasyon ekle
+            setTimeout(() => {
+              entry.target.classList.add('animate-children');
+            }, 100);
+          }
+          
+          observer.unobserve(entry.target); // Gözlemeyi durdur
+        }
+      });
+    }, {
+      threshold: 0.1 // %10'u göründüğünde tetikle
+    });
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+    
+    parentElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+
+  // Yazı yazma animasyonu
+  document.addEventListener('DOMContentLoaded', function() {
+    const heroTitleLines = document.querySelectorAll('.typewriter-line');
+    if(heroTitleLines.length > 0) {
+      // Başlangıçta metni gizle
+      heroTitleLines.forEach((line, index) => {
+        line.textContent = '';
+        line.style.width = '0';
+        line.style.overflow = 'hidden';
+        line.style.whiteSpace = 'nowrap';
+      });
+      
+      // Animasyonu başlat
+      setTimeout(() => {
+        heroTitleLines.forEach((line, index) => {
+          const text = line.getAttribute('data-text');
+          line.textContent = text;
+          
+          // Animasyon süresi (daha hızlı)
+          let duration = 2000; // 2 saniye
+          if(window.innerWidth <= 480) {
+            duration = 1500; // 1.5 saniye (mobil)
+          }
+          
+          // Gecikme (satırlar sırayla başlasın)
+          let delay = index * 1000; // 1 saniye arayla
+          if(window.innerWidth <= 480) {
+            delay = index * 800; // 0.8 saniye arayla (mobil)
+          }
+          
+          // Animasyonu başlat
+          setTimeout(() => {
+            line.style.transition = `width ${duration}ms steps(40, end)`;
+            line.style.width = '100%';
+            
+            // Animasyon tamamlandığında stilleri ayarla
+            setTimeout(() => {
+              line.style.width = 'auto';
+              line.style.overflow = 'visible';
+              line.style.whiteSpace = 'normal';
+            }, duration);
+          }, delay);
+        });
+      }, 500);
+    }
+  });
+</script>
