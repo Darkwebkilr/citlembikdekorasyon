@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Emlak V1 - Hayalinizdeki Evi Bulun</title>
+    <meta name="description"
+        content="Geniş portföyümüzle satılık ve kiralık daireler, villalar ve daha fazlası sizleri bekliyor.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+
+
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="img/Logo.jpg" alt="Emlak V1 Logo" class="h-12">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="hidden md:flex items-center space-x-8 text-gray-800">
+                    <a class="hover:text-red-600" href="#">Kurumsal</a>
+                    <a class="hover:text-red-600" href="#">Hizmetlerimiz</a>
+                    <a class="hover:text-red-600" href="#">Projeler</a>
+                    <a class="hover:text-red-600" href="#">Konut Kredisi</a>
+                    <a class="hover:text-red-600" href="#">Blog</a>
+                </div>
+                <a class="hidden md:block bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700"
+                    href="#">Danışman Ol</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden">
+        <div
+            class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full flex flex-col">
+            <div class="flex justify-end p-4">
+                <button id="close-mobile-menu" class="text-gray-800 focus:outline-none">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="px-4 py-6 flex-grow">
+                <a href="#" class="block py-2 text-gray-800 hover:text-red-600">Kurumsal</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-red-600">Hizmetlerimiz</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-red-600">Projeler</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-red-600">Konut Kredisi</a>
+                <a href="#" class="block py-2 text-gray-800 hover:text-red-600">Blog</a>
+            </div>
+            <div class="p-4">
+                <a class="block w-full bg-red-600 text-white text-center py-2 px-4 rounded-full font-semibold hover:bg-red-700"
+                    href="#">Danışman Ol</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <main class="bg-[url('img/hero.jpg')] bg-cover bg-center py-20 px-4">
+        <div class="container mx-auto px-4 py-16 text-white text-center">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hayalinizdeki Evi Bulun</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Geniş portföyümüzle satılık ve kiralık daireler,
+                    villalar
+                    ve daha fazlası sizleri bekliyor.</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
+                        <div class="col-span-1 md:col-span-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div>
+                                    <label class="text-gray-500 text-sm font-medium block mb-2"
+                                        for="location">Konum</label>
+                                    <input
+                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:border-red-500 focus:ring-red-500"
+                                        id="location" placeholder="Şehir, ilçe veya mahalle" type="text" />
+                                </div>
+                                <div>
+                                    <label class="text-gray-500 text-sm font-medium block mb-2" for="type">İlan
+                                        Tipi</label>
+                                    <select
+                                        class="w-full text-black border-gray-300 rounded-lg shadow-sm focus:border-red-500 focus:ring-red-500"
+                                        id="type">
+                                        <option>Satılık</option>
+                                        <option>Kiralık</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-gray-500 text-sm font-medium block mb-2"
+                                        for="property-type">Emlak Tipi</label>
+                                    <select
+                                        class="w-full text-black border-gray-300 rounded-lg shadow-sm focus:border-red-500 focus:ring-red-500"
+                                        id="property-type">
+                                        <option>Daire</option>
+                                        <option>Villa</option>
+                                        <option>İş Yeri</option>
+                                        <option>Arsa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <button
+                                class="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition duration-300 flex items-center justify-center">
+                                <span class="material-icons mr-2">search</span>
+                                <span>Ara</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div class="bg-gray-50 rounded-t-3xl -mt-8 py-12 px-4 md:px-10">
+        <div class="container mx-auto">
+            <!-- Trust Elementleri -->
+            <div class="mt-12 bg-gray-100 py-8 px-4 rounded-lg mb-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center text-center transition duration-500 hover:scale-105">
+                        <div class="bg-blue-100 p-3 rounded-full mb-3">
+                            <span class="material-icons text-blue-600 text-2xl">verified</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">1000+ Danışman</h3>
+                        <p class="text-gray-600 text-sm">Türkiye'nin her yerinde uzman danışmanlar</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center transition duration-500 hover:scale-105">
+                        <div class="bg-green-100 p-3 rounded-full mb-3">
+                            <span class="material-icons text-green-600 text-2xl">home</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">50.000+ İlan</h3>
+                        <p class="text-gray-600 text-sm">Her bütçeye ve ihtiyaca uygun seçenekler</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center transition duration-500 hover:scale-105">
+                        <div class="bg-yellow-100 p-3 rounded-full mb-3">
+                            <span class="material-icons text-yellow-600 text-2xl">support_agent</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">7/24 Destek</h3>
+                        <p class="text-gray-600 text-sm">Her zaman yanınızda, her sorunun çözümü için</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center transition duration-500 hover:scale-105">
+                        <div class="bg-purple-100 p-3 rounded-full mb-3">
+                            <span class="material-icons text-purple-600 text-2xl">workspace_premium</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800">10+ Yıl Deneyim</h3>
+                        <p class="text-gray-600 text-sm">Uzun yıllara dayanan deneyim ve başarı</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Öne Çıkan Satılık İlanlar -->
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Öne Çıkan Satılık İlanlar</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img alt="Modern villa with pool"
+                                    class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                    src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2070&auto=format&fit=crop">
+                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Öne
+                                    Çıkan</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg text-gray-800">Bodrum'da Havuzlu Lüks Villa</h3>
+                                <p class="text-gray-600">4+1, 350 m², Özel Plaj Erişimi</p>
+                                <p class="text-red-600 font-bold text-xl mt-2">25.000.000 ₺</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img alt="Şehir merkezinde daire"
+                                    class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                    src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop">
+                                <span
+                                    class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Fırsat</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg text-gray-800">Kadıköy Merkezde 2+1 Daire</h3>
+                                <p class="text-gray-600">95 m², Metroya 5 Dakika</p>
+                                <p class="text-red-600 font-bold text-xl mt-2">8.500.000 ₺</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 md:pl-10 mt-10 md:mt-0">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Öne Çıkan Danışmanlar</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <img alt="Danışman portresi"
+                                class="w-16 h-16 rounded-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop">
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-800">Ahmet Yılmaz</h3>
+                                <p class="text-sm text-gray-500">Lüks Konut Uzmanı</p>
+                                <div class="flex items-center text-sm text-gray-500 mt-1">
+                                    <span class="material-icons text-sm mr-1">phone</span>
+                                    +90 555 123 45 67
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img alt="Danışman portresi"
+                                class="w-16 h-16 rounded-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop">
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-800">Ahmet Erdemir</h3>
+                                <p class="text-sm text-gray-500">Ticari Gayrimenkul</p>
+                                <div class="flex items-center text-sm text-gray-500 mt-1">
+                                    <span class="material-icons text-sm mr-1">phone</span>
+                                    +90 555 987 65 43
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800">Kiralık İlanları</h2>
+                    <a href="#" class="text-red-600 font-semibold hover:underline">Tümünü Gör</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img alt="Kiralık daire"
+                                class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=2070&auto=format&fit=crop">
+                            <span
+                                class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">KİRALIK</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800">Beşiktaş'ta Eşyalı 1+1 Stüdyo</h3>
+                            <p class="text-gray-500 text-sm">55 m², Boğaz Manzaralı</p>
+                            <p class="text-red-600 font-bold text-lg mt-2">25.000 ₺ / Ay</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img alt="Kiralık villa"
+                                class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop">
+                            <span
+                                class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">KİRALIK</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800">Çeşme'de Sezonluk Kiralık Villa</h3>
+                            <p class="text-gray-500 text-sm">3+1, Özel Havuzlu</p>
+                            <p class="text-red-600 font-bold text-lg mt-2">150.000 ₺ / Sezon</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative">
+                            <img alt="Kiralık ofis"
+                                class="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2073&auto=format&fit=crop">
+                            <span
+                                class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">KİRALIK</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-800">Levent'te Prestijli Ofis Katı</h3>
+                            <p class="text-gray-500 text-sm">500 m², Plazada</p>
+                            <p class="text-red-600 font-bold text-lg mt-2">120.000 ₺ / Ay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Öne Çıkan Blog Yazıları -->
+    <div class="bg-gray-50 py-12 px-4 md:px-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Öne Çıkan Blog Yazıları</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img alt="İstanbul'da Satılık Daire Fiyatları" class="w-full h-48 object-cover"
+                        src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500">Emlak Pazarı</span>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-2 mb-3">İstanbul'da Satılık Daire Fiyatları
+                            2024</h3>
+                        <p class="text-gray-600 mb-4">İstanbul'un farklı semtlerindeki satılık daire fiyatlarını analiz
+                            ediyoruz.
+                        </p>
+                        <a href="#" class="text-red-600 font-semibold hover:underline">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img alt="Kiralık Evde Dikkat Edilmesi Gerekenler" class="w-full h-48 object-cover"
+                        src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500">Rehber</span>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-2 mb-3">Kiralık Evde Dikkat Edilmesi
+                            Gerekenler</h3>
+                        <p class="text-gray-600 mb-4">Kiralık ev seçerken nelere dikkat etmelisiniz? İşte detaylı
+                            rehber.</p>
+                        <a href="#" class="text-red-600 font-semibold hover:underline">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div
+                    class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img alt="Yeni Evde Dekorasyon Trendleri" class="w-full h-48 object-cover"
+                        src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=2070&auto=format&fit=crop">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500">Tasarım</span>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-2 mb-3">2024 Yılında Ev Dekorasyon Trendleri
+                        </h3>
+                        <p class="text-gray-600 mb-4">Yeni evinizi şık bir şekilde dekore etmek için son trendler.</p>
+                        <a href="#" class="text-red-600 font-semibold hover:underline">Devamını Oku</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons (Phone & WhatsApp) -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-30">
+        <a href="tel:+901234567890"
+            class="bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-110">
+            <span class="material-icons">phone</span>
+        </a>
+        <a href="https://wa.me/901234567890" target="_blank"
+            class="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition duration-300 transform hover:scale-110"
+            title="WhatsApp ile konuş">
+            <!-- WhatsApp Icon -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+    </div>
+
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Hakkımızda -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="/">
+                            <img src="img/Logo.jpg" alt="Emlak V1 Beyaz Logo" class="h-12 bg-white p-1 rounded">
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-4">Hayalinizdeki evi bulmanıza yardımcı oluyoruz. En iyi fırsatlar için
+                        bizi takip
+                        edin.
+                    </p>
+                    <!-- Sosyal Medya -->
+                    <div class="flex space-x-4">
+                        <a class="text-gray-400 hover:text-blue-400 transition duration-300" href="#">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-blue-300 transition duration-300" href="#">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                        </a>
+                        <a class="text-gray-400 hover:text-green-500 transition duration-300" href="#">
+                            <!-- WhatsApp Icon -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hızlı Erişim -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 pb-2 border-b border-gray-700">Hızlı Erişim</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Hakkımızda</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">İletişim</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Kariyer</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Sıkça Sorulan
+                                Sorular</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- İlanlar -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 pb-2 border-b border-gray-700">İlanlar</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Satılık Konut</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Kiralık Konut</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Satılık İş
+                                Yeri</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition duration-300" href="#">Kiralık İş
+                                Yeri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bülten -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 pb-2 border-b border-gray-700">Bülten</h3>
+                    <p class="text-gray-400 mb-4">Son fırsatlar ve haberler için bültenimize abone olun.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="E-posta adresiniz"
+                            class="px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Abone
+                            Ol</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Alt Kısım -->
+            <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Emlak V1. Tüm hakları saklıdır.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition duration-300">Gizlilik
+                        Politikası</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition duration-300">Kullanım
+                        Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Yukarı Çık Butonu -->
+    <button id="scroll-to-top"
+        class="fixed bottom-24 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition duration-300 opacity-0 transform translate-y-2 pointer-events-none"
+        aria-label="Yukarı Çık">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobil menü açma ve kapama
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = mobileMenu.querySelector('div');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenuContent.classList.remove('translate-x-full');
+            }, 10);
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenuContent.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+
+        // Menü dışına tıklandığında kapatma
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenuButton.click();
+            }
+        });
+
+        // Yukarı Çık butonu
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none');
+                scrollToTopButton.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollToTopButton.classList.remove('opacity-100', 'translate-y-0');
+                scrollToTopButton.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
