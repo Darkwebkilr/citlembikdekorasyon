@@ -1,0 +1,4 @@
+Fix: Correct Tailwind CSS integration and remove unused dependency
+
+- Replaced `@import "tailwindcss";` with `@tailwind` directives in `src/styles/global.css`.
+- Removed `@tailwindcss/vite` dependency from `package.json`.

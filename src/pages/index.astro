@@ -3,6 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Buttons from "../components/Buttons.astro";
 import Header from "../components/Header.astro";
+
+// Resimleri import et
+import img1 from "/image/1.webp";
+import img2 from "/image/2.webp";
+import img3 from "/image/3.webp";
+import img4 from "/image/4.webp";
+import img5 from "/image/5.webp";
+import img6 from "/image/6.webp";
+import img7 from "/image/7.webp";
+import img8 from "/image/8.webp";
 ---
 
 <Layout title="Çitlembik Dekorasyon">
@@ -12,8 +22,7 @@ import Header from "../components/Header.astro";
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <title>Çitlembik Dekorasyon</title>
       <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
-      ></script>
+      
       <link href="https://fonts.googleapis.com" rel="preconnect" />
       <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
       <link
@@ -104,7 +113,7 @@ import Header from "../components/Header.astro";
                 <img
                   alt="Modern Elegance Residence"
                   class="w-40 h-40 object-cover rounded-lg shadow-md"
-                  src="/image/1.webp"
+                  src={img1}
                 />
                 <div>
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -123,7 +132,7 @@ import Header from "../components/Header.astro";
                 <img
                   alt="Doğal Huzur Sığınağı"
                   class="w-40 h-40 object-cover rounded-lg shadow-md"
-                  src="/image/2.webp"
+                  src={img2}
                 />
                 <div>
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -143,7 +152,7 @@ import Header from "../components/Header.astro";
                 <img
                   alt="Büyük Villa Yenilemesi"
                   class="w-40 h-40 object-cover rounded-lg shadow-md"
-                  src="/image/3.webp"
+                  src={img3}
                 />
                 <div>
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -202,7 +211,7 @@ import Header from "../components/Header.astro";
                   <div class="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
                     <div
                       class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
-                      style='background-image: url("/image/4.webp");'
+                      style={`background-image: url(${img4});`}
                     >
                     </div>
                   </div>
@@ -213,7 +222,7 @@ import Header from "../components/Header.astro";
                   <div class="w-full md:w-1/2 h-64 md:h-80 order-1">
                     <div
                       class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
-                      style='background-image: url("/image/5.webp");'
+                      style={`background-image: url(${img5});`}
                     >
                     </div>
                   </div>
@@ -258,7 +267,7 @@ import Header from "../components/Header.astro";
                   <div class="w-full md:w-1/2 h-64 md:h-80 order-1 md:order-2">
                     <div
                       class="w-full h-full bg-center bg-no-repeat bg-cover rounded-md"
-                      style='background-image: url("/image/6.webp");'
+                      style={`background-image: url(${img6});`}
                     >
                     </div>
                   </div>
@@ -313,7 +322,7 @@ import Header from "../components/Header.astro";
           <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div class="flex items-center mb-4">
               <!-- Rastgele profil resmi -->
-              <img src="/image/7.webp" alt="Elif Demir" class="w-12 h-12 rounded-full mr-4 object-cover" />
+              <img src={img7} alt="Elif Demir" class="w-12 h-12 rounded-full mr-4 object-cover" />
               <div>
                 <h4 class="font-bold text-gray-800">Elif Demir</h4>
                 <div class="flex text-yellow-400">
@@ -344,7 +353,7 @@ import Header from "../components/Header.astro";
           <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div class="flex items-center mb-4">
               <!-- Rastgele profil resmi -->
-              <img src="/image/8.webp" alt="Mehmet Kaya" class="w-12 h-12 rounded-full mr-4 object-cover" />
+              <img src={img8} alt="Mehmet Kaya" class="w-12 h-12 rounded-full mr-4 object-cover" />
               <div>
                 <h4 class="font-bold text-gray-800">Mehmet Kaya</h4>
                 <div class="flex text-yellow-400">
@@ -386,7 +395,7 @@ import Header from "../components/Header.astro";
             <img
               alt="Modern kırmızı kanepeli, koyu gri duvarlı ve ahşap panelli şık bir oturma odası."
               class="w-full h-80 object-cover mb-6"
-              src="/image/1.webp"
+              src={img1}
             />
             <h2 class="text-2xl font-semibold mb-4">Özel Mobilya Seçimi</h2>
             <p class="text-gray-600 mb-6 flex-grow">
@@ -402,7 +411,7 @@ import Header from "../components/Header.astro";
             <img
               alt="Hardal sarısı kanepeli, modern avizeli ve bitkili bohem tarzı bir oturma odası."
               class="w-full h-80 object-cover mb-6"
-              src="/image/2.webp"
+              src={img2}
             />
             <h2 class="text-2xl font-semibold mb-4">
               Bohem Eklektik İç Mekanlar
@@ -420,7 +429,7 @@ import Header from "../components/Header.astro";
             <img
               alt="Yeşil kanepeli, sarı örtülü ve galeri duvarlı minimalist bir oturma odası."
               class="w-full h-80 object-cover mb-6"
-              src="/image/3.webp"
+              src={img3}
             />
             <h2 class="text-2xl font-semibold mb-4">
               Modern Minimalist İç Mekanlar

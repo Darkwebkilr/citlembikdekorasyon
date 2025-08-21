@@ -5,9 +5,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://citlembikdekorasyon.vercel.app',
   base: '/',
   build: {
-    assets: '_astro',
+    assets: 'assets',
   },
   vite: {
     plugins: [tailwindcss()]
