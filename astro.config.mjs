@@ -6,8 +6,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://citlembikdekorasyon.vercel.app',
   base: '/',
-  build: {
-    assets: '_astro',
-  },
+  publicDir: './public',
   integrations: [tailwind()]
 });

@@ -1,6 +1,5 @@
-Refactor: Update image paths and Tailwind CSS integration
+Fix: Update image paths in index.astro to direct public folder references
 
-- Corrected image paths in various .astro files to use root-relative paths.
-- Removed CDN link for Tailwind CSS from all .astro files.
-- Created `tailwind.config.cjs` for proper Tailwind CSS integration.
-- Updated `global.css` to use `@tailwind` directives.
+- Replaced `src={imgX}` with direct paths like `src="/image/X.webp"`.
+- Updated `background-image` styles to use direct paths for local images.
+- Kept external URLs for hero background and first customer review image as requested.
