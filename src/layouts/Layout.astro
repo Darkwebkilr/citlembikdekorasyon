@@ -1,47 +1,69 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import '../styles/global.css';
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro"; // Eklendi
+import Buttons from "../components/Buttons.astro"; // Eklendi
+import "../styles/global.css";
+
 interface Props {
-	title: string;
-	description?: string; // Make description optional
+  title: string;
+  description?: string;
 }
 
-const { title, description = 'Çitlembik Dekorasyon - A dan z ye dekorason ve yenileme, Özel Tasarım Mobilyalar ve daha fazlası ' } = Astro.props;
+const {
+  title,
+  description = "Çitlembik Dekorasyon - A dan z ye dekorason ve yenileme, Özel Tasarım Mobilyalar ve daha fazlası ",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="tr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/image/Logo.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<!-- SEO Meta Tags -->
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="keywords" content="dekorasyon, iç mimarlık, tasarım, çitlembik, tadilat, mobilya" />
-		<meta name="author" content="Çitlembik Dekorasyon" />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/image/Logo.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-		<!-- Canonical URL -->
-		<link rel="canonical" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="dekorasyon, iç mimarlık, tasarım, çitlembik, tadilat, mobilya"
+    />
+    <meta name="author" content="Çitlembik Dekorasyon" />
 
-		<!-- Open Graph (Facebook, LinkedIn, etc.) -->
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/image/Logo.png" /> 
-		<meta property="og:site_name" content="Çitlembik Dekorasyon" />
+    <link rel="canonical" />
 
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="/image/Logo.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/image/Logo.png" />
+    <meta property="og:site_name" content="Çitlembik Dekorasyon" />
 
-	</head>
-	<body>
-		<slot />
-<ViewTransitions />
-	</body>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/image/Logo.png" />
+  </head>
+  <body>
+    <Header />
+    <Buttons />
+    <slot />
+    <ViewTransitions />
+
+
+
+    <script>
+      function runPageScripts() {
+        // --- ANASAYFA ANİMASYONLARI ---
+        const isHomePage = document.querySelector(".hero-background");
+        if (isHomePage) {
+          // (Anasayfa animasyon kodları burada, önceki cevaptaki gibi kalacak)
+        }
+
+       
+      }
+
+      document.addEventListener("astro:page-load", runPageScripts);
+    </script>
+  </body>
 </html>

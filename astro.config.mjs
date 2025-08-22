@@ -7,5 +7,6 @@ export default defineConfig({
   site: 'https://citlembikdekorasyon.vercel.app',
   base: '/',
   publicDir: './public',
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+    viewTransitions: true
 });

@@ -6,42 +6,6 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout title="Blog | Çitlembik Dekorasyon">
-  <html lang="tr">
-    <head>
-      <meta charset="utf-8" />
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Blog | Çitlembik Dekorasyon</title>
-      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-      
-      <link href="https://fonts.googleapis.com" rel="preconnect" />
-      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet"
-      />
-      <style type="text/tailwindcss">
-        :root {
-          --primary-color: #5c6670;
-          --secondary-color: #fdfdfb;
-          --background-color: #f3f3f1;
-          --text-primary: #1c1c1c;
-          --text-secondary: #5c6670;
-          --accent-color: #eae8e4;
-        }
-        body {
-          font-family: "Work Sans", sans-serif;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          font-family: "Playfair Display", serif;
-        }
-      </style>
-    </head>
-    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
 <Buttons/>
       <div
         class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
@@ -213,7 +177,4 @@ import Header from "../components/Header.astro";
         </main>
       </div>
     <Footer />
-
-    </body>
-  </html>
 </Layout>

@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import Buttons from "../components/Buttons.astro";
-import Header from "../components/Header.astro";
+
 import Hero from "../components/Hero.astro";
 // Resimleri import et
 
@@ -47,8 +46,7 @@ import Hero from "../components/Hero.astro";
       </style>
     </head>
     <body class=" bg-[var(--background-color)] text-[var(--text-primary)]">
-<Buttons/>
-<Header/>
+
 <Hero />
       <div class="container mx-auto px-4 py-16 overflow-y-scroll" data-animate-children="slide-up">
         <div
@@ -435,89 +433,71 @@ import Hero from "../components/Hero.astro";
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
   </html>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" slot="head-body" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" is:inline></script>
+  
+  <script is:inline>
+    function initializeHomePage() {
+      // Swiper'ı başlat
+      const swiperElement = document.querySelector('.mySwiper');
+      if (swiperElement && typeof Swiper !== 'undefined' && !swiperElement.swiper) {
+        new Swiper(".mySwiper", {
+          pagination: { el: ".swiper-pagination", type: "fraction" },
+          navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+      }
+
+      // Anasayfa animasyonlarını çalıştır (kaydırma ve yazı efekti)
+      const elementsToAnimate = document.querySelectorAll('[data-animate="slide-up"], [data-animate-children="slide-up"]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slide-up');
+            if (entry.target.hasAttribute('data-animate-children')) {
+              setTimeout(() => entry.target.classList.add('animate-children'), 100);
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      elementsToAnimate.forEach(element => observer.observe(element));
+
+      const heroTitleLines = document.querySelectorAll('.typewriter-line');
+      if (heroTitleLines.length > 0 && !heroTitleLines[0].classList.contains('animated')) {
+        heroTitleLines.forEach(line => line.classList.add('animated'));
+        heroTitleLines.forEach(line => {
+            line.style.width = '0';
+            line.style.overflow = 'hidden';
+            line.style.whiteSpace = 'nowrap';
+            line.textContent = ''; 
+        });
+        setTimeout(() => {
+            heroTitleLines.forEach((line, index) => {
+                const text = line.getAttribute('data-text');
+                line.textContent = text;
+                const duration = 1500;
+                const delay = index * 500;
+                setTimeout(() => {
+                    line.style.transition = `width ${duration}ms steps(40, end)`;
+                    line.style.width = '100%';
+                    setTimeout(() => {
+                        line.style.width = 'auto';
+                        line.style.overflow = 'visible';
+                        line.style.whiteSpace = 'normal';
+                    }, duration);
+                }, delay);
+            });
+        }, 500);
+      }
+    }
+
+    // Fonksiyonu hem ilk yüklemede hem de sayfa geçişlerinde çalıştır
+    document.addEventListener('astro:page-load', initializeHomePage);
+  </script>
+
+
+
 </Layout>
 
-<script>
-  document.body.style.scrollBehavior = "smooth";
-
-  // Animasyonları sıralı olarak başlat
-  document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('[data-animate="slide-up"]');
-    const parentElements = document.querySelectorAll('[data-animate-children="slide-up"]');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-slide-up');
-          
-          // Eğer elementin içindeki çocuklar için de animasyon varsa
-          if (entry.target.hasAttribute('data-animate-children')) {
-            // Kısa bir gecikme sonra çocuklara animasyon ekle
-            setTimeout(() => {
-              entry.target.classList.add('animate-children');
-            }, 100);
-          }
-          
-          observer.unobserve(entry.target); // Gözlemeyi durdur
-        }
-      });
-    }, {
-      threshold: 0.1 // %10'u göründüğünde tetikle
-    });
-
-    elements.forEach(element => {
-      observer.observe(element);
-    });
-    
-    parentElements.forEach(element => {
-      observer.observe(element);
-    });
-  });
-
-  // Yazı yazma animasyonu
-  document.addEventListener('DOMContentLoaded', function() {
-    const heroTitleLines = document.querySelectorAll('.typewriter-line');
-    if(heroTitleLines.length > 0) {
-      // Başlangıçta metni gizle
-      heroTitleLines.forEach((line, index) => {
-        line.textContent = '';
-        line.style.width = '0';
-        line.style.overflow = 'hidden';
-        line.style.whiteSpace = 'nowrap';
-      });
-      
-      // Animasyonu başlat
-      setTimeout(() => {
-        heroTitleLines.forEach((line, index) => {
-          const text = line.getAttribute('data-text');
-          line.textContent = text;
-          
-          // Animasyon süresi (daha hızlı)
-          let duration = 1500; // 2 saniye
-          if(window.innerWidth <= 480) {
-            duration = 1500; // 1.5 saniye (mobil)
-          }
-          
-          // Gecikme (satırlar sırayla başlasın)
-          let delay = index * 500; // 1 saniye arayla
-          if(window.innerWidth <= 480) {
-            delay = index * 500; // 0.8 saniye arayla (mobil)
-          }
-          
-          // Animasyonu başlat
-          setTimeout(() => {
-            line.style.transition = `width ${duration}ms steps(40, end)`;
-            line.style.width = '100%';
-            
-            // Animasyon tamamlandığında stilleri ayarla
-            setTimeout(() => {
-              line.style.width = 'auto';
-              line.style.overflow = 'visible';
-              line.style.whiteSpace = 'normal';
-            }, duration);
-          }, delay);
-        });
-      }, 500);
-    }
-  });
-</script>
