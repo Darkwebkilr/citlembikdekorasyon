@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Buttons from "../components/Buttons.astro";
 import Header from "../components/Header.astro";
-
+import Hero from "../components/Hero.astro";
 // Resimleri import et
 
 ---
@@ -22,6 +22,8 @@ import Header from "../components/Header.astro";
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
       <style type="text/tailwindcss">
         :root {
           --primary-color: #5c6670;
@@ -44,43 +46,10 @@ import Header from "../components/Header.astro";
         }
       </style>
     </head>
-    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+    <body class=" bg-[var(--background-color)] text-[var(--text-primary)]">
 <Buttons/>
-      <div
-        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-      >
 <Header/>
-        <main class="flex-grow">
-          <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div
-              class="absolute inset-0 bg-cover bg-center hero-background"
-              style='background-image: linear-gradient(rgba(40, 40, 40, 0.4) 0%, rgba(40, 40, 40, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAC2oXzbDJvKrun6COYsgsQD36TV1WnotTFTGrP44SXdzSDzX28BKvdeIRiOs6sn3msagKo3grmbQTIhQ26L6hOQXqPf4n3F9aI8t6w-VB9E4C9CjRrRMU4cgkXuggFHZCo6JV0yftTRMJs3458g-pspy7Cm1KnO_Va-L3VAcJ1wgWSws0RxTA2tfUu8KxGUNXZJ1Iub0NeAsKOhx5gi2ulO5fou7eDPh7iGWCabWgjVT1ED5qiYEMoKiOTWwwsMPqrT6bsg8DB0O4");'
-            >
-            </div>
-            <div class="relative text-center text-white px-4">
-              <h1
-                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight"
-              >
-                <span class="block typewriter-line" data-text="25 Yıllık">25 Yıllık</span>
-                <span class="block typewriter-line" data-text="Deneyimle">Deneyimle</span>
-                <span class="block typewriter-line" data-text="Evlerinizi Şekillendiriyoruz">Evlerinizi Şekillendiriyoruz</span>
-              </h1>
-              <p
-                class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light leading-relaxed"
-              >
-                Çitlembik Dekorasyon olarak 25 yıldır ev sahiplerine özel çözümler sunuyor, yaşam alanlarını işlevsel ve estetik hale getiriyoruz.
-              </p>
-              <a
-                class="inline-block bg-white text-[var(--text-primary)] hover:bg-[var(--accent-color)] transition-all duration-300 ease-in-out text-base font-medium py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1"
-                href="#"
-              >
-                Hemen Teklif Alın
-              </a>
-            </div>
-          </section>
-        </main>
-      </div>
-
+<Hero />
       <div class="container mx-auto px-4 py-16 overflow-y-scroll" data-animate-children="slide-up">
         <div
           class="flex flex-col lg:flex-row lg:items-center lg:justify-between"
@@ -97,7 +66,7 @@ import Header from "../components/Header.astro";
             </p>
             <a
               class="inline-block bg-transparent border border-gray-800 text-gray-800 py-3 px-8 hover:bg-gray-800 hover:text-white transition-colors duration-300"
-              href="#">TÜM PROJELERİMİZ</a
+                            href="/portfolio">TÜM PROJELERİMİZ</a
             >
           </div>
           <div class="lg:w-1/2">
@@ -169,7 +138,7 @@ import Header from "../components/Header.astro";
       <!--Hakkımızda-->
 
       <div
-        class="relative flex size-full min-h-screen flex-col bg-[#F8F7F5] group/design-root overflow-x-hidden"
+        class="relative flex size-full min-h-screen flex-col bg-[#F8F7F5] group/design-root overflow-y-hidden overflow-x-hidden"
         data-animate-children="slide-up"
       >
         <div class="flex h-full grow flex-col">
@@ -388,7 +357,7 @@ import Header from "../components/Header.astro";
             <img
               alt="Modern kırmızı kanepeli, koyu gri duvarlı ve ahşap panelli şık bir oturma odası."
               class="w-full h-80 object-cover mb-6"
-              src={}
+              src={""}
             />
             <h2 class="text-2xl font-semibold mb-4">Özel Mobilya Seçimi</h2>
             <p class="text-gray-600 mb-6 flex-grow">
@@ -404,7 +373,7 @@ import Header from "../components/Header.astro";
             <img
               alt="Hardal sarısı kanepeli, modern avizeli ve bitkili bohem tarzı bir oturma odası."
               class="w-full h-80 object-cover mb-6"
-              src={}
+              src={""}
             />
             <h2 class="text-2xl font-semibold mb-4">
               Bohem Eklektik İç Mekanlar
@@ -441,7 +410,7 @@ import Header from "../components/Header.astro";
       </div>
 
       <div class="flex bg-[#F8F7F5] min-h-screen items-center justify-center" data-animate="slide-up">
-        <div class="w-full px-4 py-16 ">
+        <div class="w-full px-4 py-12 ">
           <div class="text-center">
             <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
               Hakkımızda
@@ -463,6 +432,7 @@ import Header from "../components/Header.astro";
         </div>
             </div>
     <Footer data-animate="slide-up" />
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
   </html>
 </Layout>
@@ -523,15 +493,15 @@ import Header from "../components/Header.astro";
           line.textContent = text;
           
           // Animasyon süresi (daha hızlı)
-          let duration = 2000; // 2 saniye
+          let duration = 1500; // 2 saniye
           if(window.innerWidth <= 480) {
             duration = 1500; // 1.5 saniye (mobil)
           }
           
           // Gecikme (satırlar sırayla başlasın)
-          let delay = index * 1000; // 1 saniye arayla
+          let delay = index * 500; // 1 saniye arayla
           if(window.innerWidth <= 480) {
-            delay = index * 800; // 0.8 saniye arayla (mobil)
+            delay = index * 500; // 0.8 saniye arayla (mobil)
           }
           
           // Animasyonu başlat

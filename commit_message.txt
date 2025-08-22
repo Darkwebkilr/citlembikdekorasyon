@@ -1,5 +1,5 @@
-Fix: Update image paths in index.astro to direct public folder references
+Fix: Ensure public directory and all assets are tracked and pushed
 
-- Replaced `src={imgX}` with direct paths like `src="/image/X.webp"`.
-- Updated `background-image` styles to use direct paths for local images.
-- Kept external URLs for hero background and first customer review image as requested.
+- Staged all untracked files, including the `public/` directory and its contents.
+- Reverted image paths in `Header.astro` and `index.astro` to simple root-relative paths.
+- Confirmed `publicDir: './public'` in `astro.config.mjs`.

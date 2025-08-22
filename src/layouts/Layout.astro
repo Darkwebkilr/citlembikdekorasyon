@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 interface Props {
 	title: string;
@@ -41,5 +42,6 @@ const { title, description = 'Çitlembik Dekorasyon - A dan z ye dekorason ve ye
 	</head>
 	<body>
 		<slot />
+<ViewTransitions />
 	</body>
 </html>
