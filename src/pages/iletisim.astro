@@ -3,112 +3,34 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Buttons from "../components/Buttons.astro";
 import Header from "../components/Header.astro";
+import Bg from "../components/Bg.astro";
+import Form from "../components/Form.astro";
+
 ---
 
 <Layout title="İletişim | Çitlembik Dekorasyon">
 <Buttons/>
+<Bg />
       <div
         class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
       >
 <Header/>
         <main class="flex-grow">
           <!-- İletişim Başlık -->
-          <section class="relative py-20 md:py-32 bg-[#F8F7F5]">
+          <section class="relative py-20 mt-20 md:py-32 bg-[#202020]">
             <div class="container mx-auto px-4 text-center">
-              <h1 class="text-4xl md:text-6xl font-bold mb-6">İletişim</h1>
+              <h1 class="text-4xl md:text-6xl text-white font-bold mb-6">İletişim</h1>
               <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
                 Size nasıl yardımcı olabiliriz?
               </p>
             </div>
           </section>
-
-          <!-- İletişim İçerik -->
-          <section class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <!-- İletişim Formu -->
-              <div>
-                <h2 class="text-3xl font-bold mb-8">Bize Ulaşın</h2>
-                <form class="space-y-6">
-                  <div>
-                    <label for="name" class="block text-lg font-medium mb-2">Ad Soyad</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
-                      placeholder="Adınızı ve soyadınızı girin"
-                    >
-                  </div>
-                  <div>
-                    <label for="email" class="block text-lg font-medium mb-2">E-posta</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
-                      placeholder="E-posta adresinizi girin"
-                    >
-                  </div>
-                  <div>
-                    <label for="phone" class="block text-lg font-medium mb-2">Telefon</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
-                      placeholder="Telefon numaranızı girin"
-                    >
-                  </div>
-                  <div>
-                    <label for="subject" class="block text-lg font-medium mb-2">Konu</label>
-                    <select 
-                      id="subject" 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
-                    >
-                      <option value="">Lütfen bir konu seçin</option>
-                      <option value="genel">Genel Bilgi</option>
-                      <option value="teklif">Fiyat Teklifi</option>
-                      <option value="randevu">Randevu Talebi</option>
-                      <option value="sikayet">Şikayet</option>
-                      <option value="diger">Diğer</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label for="message" class="block text-lg font-medium mb-2">Mesajınız</label>
-                    <textarea 
-                      id="message" 
-                      rows="5" 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
-                      placeholder="Mesajınızı buraya yazın..."
-                    ></textarea>
-                  </div>
-                  <button 
-                    type="submit" 
-                    class="w-full bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-6 rounded-md font-medium text-lg"
-                  >
-                    Mesaj Gönder
-                  </button>
-                </form>
-              </div>
+          <Form />
 
               <!-- İletişim Bilgileri -->
-              <div>
+              <div class="flex flex-col items-center mt-5">
                 <h2 class="text-3xl font-bold mb-8">İletişim Bilgilerimiz</h2>
                 
-                <!-- Adres -->
-                <div class="flex items-start mb-8">
-                  <div class="mr-4 mt-1 text-[var(--accent-color)]">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-semibold mb-2">Adres</h3>
-                    <p class="text-gray-600">
-                      İnkılap Cad. No: 45<br>
-                      Cihannüma Mahallesi<br>
-                      Beşiktaş / İstanbul
-                    </p>
-                  </div>
-                </div>
 
                 <!-- Telefon -->
                 <div class="flex items-start mb-8">
@@ -184,11 +106,18 @@ import Header from "../components/Header.astro";
 
             <!-- Harita -->
             <div class="mt-16">
-              <h2 class="text-3xl font-bold mb-8 text-center">Bizi Ziyaret Edin</h2>
-              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                <p class="text-gray-500 ">Harita entegrasyonu burada görünecek</p>
-              </div>
-            </div>
+              <h2 class="text-3xl font-bold mb-20 text-center">Bizi Ziyaret Edin</h2>
+              <div class="bg-gray-200  border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+                        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.8001639201407!2d27.10300837648356!3d38.39876097181318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb9e96e511c1b9%3A0x23a3e49339e05e55!2s5759%2F3.%20Sk.%20No%3A1%2C%2035410%20Karaba%C4%9Flar%2F%C4%B0zmir!5e0!3m2!1str!2str!4v1724601633535!5m2!1str!2str"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
           </section>
         </main>
       </div>

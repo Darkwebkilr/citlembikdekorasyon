@@ -3,19 +3,22 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Buttons from "../components/Buttons.astro";
 import Header from "../components/Header.astro";
+import Bg from "../components/Bg.astro";
+
 ---
 
 <Layout title="Hakkımızda | Çitlembik Dekorasyon">
 <Buttons/>
+<Bg />
       <div
         class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
       >
 <Header/>
-        <main class="flex-grow">
+        <main class="flex-grow mt-20">
           <!-- Hakkımızda Başlık -->
-          <section class="relative py-20 md:py-32 bg-[#F8F7F5]">
+          <section class="relative py-20 md:py-32 bg-[#202020]">
             <div class="container mx-auto px-4 text-center">
-              <h1 class="text-4xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Hakkımızda</h1>
               <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
                 25 yıldır ev dekorasyonu ve özel tasarım mobilya sektöründe
               </p>
@@ -49,70 +52,16 @@ import Header from "../components/Header.astro";
             <!-- Misyon & Vizyon -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
               <div class="bg-white p-8 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold mb-4 text-[var(--accent-color)]">Misyonumuz</h3>
-                <p class="text-gray-600">
+                <h3 class="text-2xl font-bold mb-4 text-black">Misyonumuz</h3>
+                <p class="text-black">
                   Yaşam alanlarını sadece güzel değil, aynı zamanda işlevsel ve kişisel hale getirerek, insanların evlerinde kendilerini daha iyi hissetmelerini sağlamaktır. Her projede müşteriye özel özgün çözümler geliştirerek, yaşam kalitesini artırmayı amaçlıyoruz.
                 </p>
               </div>
               <div class="bg-white p-8 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold mb-4 text-[var(--accent-color)]">Vizyonumuz</h3>
+                <h3 class="text-2xl font-bold mb-4 text-black">Vizyonumuz</h3>
                 <p class="text-gray-600">
                   Türkiye'nin önde gelen iç mekan tasarım ve mobilya firmalarından biri olarak, yenilikçi ve sürdürülebilir çözümlerle sektörde fark yaratmak. Uluslararası platformlarda da tanınan, kalite ve estetik ile öne çıkan bir marka olmak.
                 </p>
-              </div>
-            </div>
-
-            <!-- Ekibimiz -->
-            <div class="mb-20">
-              <h2 class="text-3xl font-bold mb-12 text-center">Yönetim Ekibimiz</h2>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Kişi 1 -->
-                <div class="text-center">
-                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
-                    <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                      alt="Ahmet Çitlembik" 
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 class="text-xl font-bold">Mimar Ahmet Çitlembik</h3>
-                  <p class="text-[var(--accent-color)] mb-3">Kurucu & Baş Mimari</p>
-                  <p class="text-gray-600">
-                    30 yıllık mimarlık tecrübesi ile projelerin mimari yönünü yönetiyor. "Yaşayan Mekanlar" felsefesinin öncüsü.
-                  </p>
-                </div>
-
-                <!-- Kişi 2 -->
-                <div class="text-center">
-                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
-                    <img 
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                      alt="Elif Yılmaz" 
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 class="text-xl font-bold">Mimar Elif Yılmaz</h3>
-                  <p class="text-[var(--accent-color)] mb-3">Yönetim Kurulu Üyesi</p>
-                  <p class="text-gray-600">
-                    İç mimarlık ve tasarım konularında 20 yıllık tecrübesi ile projelerin estetik yönünü yönlendiriyor.
-                  </p>
-                </div>
-
-                <!-- Kişi 3 -->
-                <div class="text-center">
-                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[var(--accent-color)]">
-                    <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                      alt="Mehmet Kaya" 
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 class="text-xl font-bold">Usta Mehmet Kaya</h3>
-                  <p class="text-[var(--accent-color)] mb-3">Üretim Müdürü</p>
-                  <p class="text-gray-600">
-                    25 yıllık marangozluk tecrübesi ile özel üretim mobilyaların üretim süreçlerini yönetiyor.
-                  </p>
-                </div>
               </div>
             </div>
 

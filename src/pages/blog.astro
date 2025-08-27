@@ -3,15 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Buttons from "../components/Buttons.astro";
 import Header from "../components/Header.astro";
+import Bg from "../components/Bg.astro";
+
 ---
 
 <Layout title="Blog | Çitlembik Dekorasyon">
 <Buttons/>
+<Bg />
       <div
         class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
       >
 <Header/>
-        <main class="flex-grow">
+        <main class="flex-grow mt-20">
           <!-- Blog Başlık -->
           <section class="relative  py-20 md:py-32 bg-[#202020]">
             <div class="container mx-auto px-4 text-center">
