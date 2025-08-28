@@ -8,5 +8,5 @@ export default defineConfig({
   base: '/',
   publicDir: './public',
   integrations: [tailwind()],
-    viewTransitions: true
+    
 });

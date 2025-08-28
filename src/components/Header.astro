@@ -1,7 +1,7 @@
 ---
 // Bu alanda import olmayacak
 ---
-<header transition:persist class="absolute top-0 rounded-b-xl left-0 right-0 z-50 p-5 transition-all duration-500" id="main-header">
+<header class="absolute top-0 rounded-b-xl left-0 right-0 z-50 p-5 transition-all duration-500" id="main-header">
   <div class="container mx-auto flex justify-between items-center">
     <a class="text-2xl font-bold tracking-wider text-white" href="/">
       <img
@@ -38,18 +38,16 @@
 </header>
 
 <script>
-  function setupHeader() {
+  document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById('main-header');
-    if (!header) return; // Header yoksa devam etme
+    if (!header) return;
 
-    // Mobil Menü Elemanları
     const menuToggle = document.getElementById('menu-toggle');
     const closeMenu = document.getElementById('close-menu');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
     const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
 
-    // Mobil Menü Fonksiyonları
     const openMobileMenu = () => {
       mobileMenu.classList.remove('hidden');
       mobileMenuBackdrop.classList.remove('hidden');
@@ -64,7 +62,6 @@
       }, 10);
     };
 
-    // Mobil Menü Olay Dinleyicileri
     menuToggle.addEventListener('click', openMobileMenu);
     closeMenu.addEventListener('click', closeMobileMenu);
     mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
@@ -72,18 +69,16 @@
       link.addEventListener('click', closeMobileMenu);
     });
 
-    // Header Arka Plan Değişimi (Scroll Olayı)
     const handleScroll = () => {
       if (window.scrollY > 70) {
-        header.classList.add('!fixed', 'bg-[#c97c34]', 'bg-opacity-90');
+        header.classList.add('fixed', 'bg-[#c97c34]', 'bg-opacity-90');
+        header.classList.remove('absolute');
       } else {
-        header.classList.remove('!fixed', 'bg-[#c97c34]', 'bg-opacity-90');
+        header.classList.remove('fixed', 'bg-[#c97c34]', 'bg-opacity-90');
+        header.classList.add('absolute');
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-  }
-
-  // Fonksiyonu hem ilk yüklemede hem de sayfa geçişlerinden sonra çalıştır
-  document.addEventListener('astro:page-load', setupHeader);
+  });
 </script>

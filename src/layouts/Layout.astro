@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro"; // Eklendi
 import Buttons from "../components/Buttons.astro"; // Eklendi
 import "../styles/global.css";
@@ -48,22 +47,7 @@ const {
     <Header />
     <Buttons />
     <slot />
-    <ViewTransitions />
 
 
-
-    <script>
-      function runPageScripts() {
-        // --- ANASAYFA ANİMASYONLARI ---
-        const isHomePage = document.querySelector(".hero-background");
-        if (isHomePage) {
-          // (Anasayfa animasyon kodları burada, önceki cevaptaki gibi kalacak)
-        }
-
-       
-      }
-
-      document.addEventListener("astro:page-load", runPageScripts);
-    </script>
   </body>
 </html>

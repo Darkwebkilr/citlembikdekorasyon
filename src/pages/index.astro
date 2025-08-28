@@ -6,520 +6,417 @@ import Form from "../components/Form.astro";
 ---
 
 <Layout title="Çitlembik Dekorasyon">
-  <html lang="tr">
-    <head>
-      <meta charset="utf-8" />
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Çitlembik Dekorasyon</title>
-      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-      <link href="https://fonts.googleapis.com" rel="preconnect" />
-      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <Hero />
 
-      <style type="text/tailwindcss">
-        :root {
-          --primary-color: #5c6670;
-          --secondary-color: #fdfdfb;
-          --background-color: #f3f3f1;
-          --text-primary: #1c1c1c;
-          --text-secondary: #5c6670;
-          --accent-color: #eae8e4;
-        }
-        body {
-          font-family: "Work Sans", sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-          font-family: "Playfair Display", serif;
-        }
-      </style>
-    </head>
-    <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
-
-      <Hero />
-
-      <div class="mx-10 md:mx-16 my-24">
-<h1 class="text-2xl text-black text-center mb-5">Hizmetler</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-      A' dan Z'ye Ev dekorasyon
-    </h2>
-    <div class="overflow-hidden  max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/1.png"
-        alt="Tasarım Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Fikirlerinizi dinliyor, ihtiyaçlarınıza özel, estetik ve fonksiyonel tasarımlar hazırlıyoruz.
-    </p>
-  </div>
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-      3 Boyutlu Tasarım
-    </h2>
-    <div class="overflow-hidden max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/2.png"
-        alt="Malzeme Seçim Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Projenizin gereksinimlerine en uygun, uzun ömürlü ve kaliteli malzemeleri özenle seçiyoruz.
-    </p>
-  </div>
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-      Mobilya Üretim Ve Tasarım
-    </h2>
-    <div class="overflow-hidden max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/3.png"
-        alt="Üretim Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Onaylanan tasarımları, en kaliteli malzemelerle atölyemizde hayata geçiriyor ve dayanıklılık testlerini yapıyoruz.
-    </p>
-  </div>
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-     Özel Dolap Tasarım Ve Üretim 
-    </h2>
-    <div class="overflow-hidden max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/4.png"
-        alt="Kalite Kontrol Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Üretimin her aşamasında titiz bir kalite kontrol süreci uygulayarak kusursuz ürünler ortaya çıkarıyoruz.
-    </p>
-  </div>
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-      Yatak Tasarım Ve Üretim
-    </h2>
-    <div class="overflow-hidden max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/5.png"
-        alt="Teslim Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Ürünlerinizi özenle paketliyor, adresinize teslim ediyor ve profesyonel montajını gerçekleştiriyoruz.
-    </p>
-  </div>
-
-  <div class="bg-gray-200 hover:bg-white transform duration-500 group rounded-lg p-8 flex flex-col border-4 border-transparent hover:border-yellow-400 transition-all ease-in-out">
-    <h2 class="text-3xl font-bold text-gray-800 group-hover:text-black mb-6 leading-tight transition-colors duration-500">
-      Ahşap İşleri 
-    </h2>
-    <div class="overflow-hidden max-h-[200px] rounded-lg shadow-md mb-6">
-      <img
-          src="svg/6.png"
-        alt="Destek Aşaması"
-        class="w-full h-full "
-      />
-    </div>
-    <p class="text-gray-600 group-hover:text-black transition-colors duration-500">
-      Teslimat sonrası her türlü sorunuz ve ihtiyacınız için yanınızda olmaya devam ediyoruz.
-    </p>
-  </div>
-
-  </div>
-</div>
-
-  <section class="py-16 bg-[#F8F7F5]" data-animate-children="slide-up">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Hizmetlerimiz</h2>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-                    Hayalinizdeki mekanları gerçeğe dönüştürmek için sunduğumuz profesyonel çözümler.
-                </p>
-            </div>
-            
-            <div class="swiper servicesSwiper relative !pb-16">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide group h-auto">
-                        <div class="flex flex-col bg-white p-6 rounded-lg shadow-lg h-full">
-                            <div class="overflow-hidden rounded-lg mb-4">
-                            <img src="/image/4.webp" alt="Özel Mobilya Tasarımı" class="group-hover:scale-125 h-64 w-full transition-transform duration-300 ease-in-out"/>
-                            </div>
-                            <div class="flex flex-col flex-grow">
-                                <h3 class="text-xl font-semibold mb-2">Sandalyeler</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Mekanınıza kusursuz uyum sağlayan, benzersiz ve işlevsel mobilyalar tasarlıyor ve üretiyoruz.</p>
-                                <a href="/hizmetler" class="font-bold text-[var(--primary-color)] hover:underline self-start">Daha Fazla Bilgi →</a>
-                            </div>
-                        </div>
-                    </div>
-<div class="swiper-slide group h-auto">
-    <div class="flex flex-col bg-white p-6 rounded-lg shadow-lg h-full">
-        <div class="overflow-hidden rounded-lg mb-4">
-            <img 
-                src="/image/5.webp" 
-                alt="A'dan Z'ye Dekorasyon" 
-                class="w-full h-64 object-cover group-hover:scale-125 transition-transform duration-300 ease-in-out"
-            />
-        </div>
-        <div class="flex flex-col flex-grow">
-            <h3 class="text-xl font-semibold mb-2">A'dan Z'ye Dekorasyon</h3>
-            <p class="text-gray-600 mb-4 flex-grow">Dokuları ve desenleri harmanlayarak canlı, kişiselleştirilmiş mekanlar için anahtar teslim çözümler sunuyoruz.</p>
-            <a href="/hizmetler" class="font-bold text-[var(--primary-color)] hover:underline self-start">Daha Fazla Bilgi →</a>
-        </div>
-    </div>
-</div>
-
-<div class="swiper-slide group h-auto">
-    <div class="flex flex-col bg-white p-6 rounded-lg shadow-lg h-full">
-        <div class="overflow-hidden rounded-lg mb-4">
-            <img 
-                src="/image/5.webp" 
-                alt="Koltuklar" 
-                class="w-full h-64 object-cover group-hover:scale-125 transition-transform duration-300 ease-in-out"
-            />
-        </div>
-        <div class="flex flex-col flex-grow">
-            <h3 class="text-xl font-semibold mb-2">Koltuklar</h3>
-            <p class="text-gray-600 mb-4 flex-grow">Dokuları ve desenleri harmanlayarak canlı, kişiselleştirilmiş mekanlar için anahtar teslim çözümler sunuyoruz.</p>
-            <a href="/hizmetler" class="font-bold text-[var(--primary-color)] hover:underline self-start">Daha Fazla Bilgi →</a>
-        </div>
-    </div>
-</div>
-
-<div class="swiper-slide group h-auto">
-    <div class="flex flex-col bg-white p-6 rounded-lg shadow-lg h-full">
-        <div class="overflow-hidden rounded-lg mb-4">
-            <img 
-                src="/image/6.webp" 
-                alt="Modern Ahşap İşleri" 
-                class="w-full h-64 object-cover group-hover:scale-125 transition-transform duration-300 ease-in-out"
-            />
-        </div>
-        <div class="flex flex-col flex-grow">
-            <h3 class="text-xl font-semibold mb-2">Masalar</h3>
-            <p class="text-gray-600 mb-4 flex-grow">25 yıllık tecrübemizi modern tasarım anlayışıyla birleştirerek hayalinizdeki ahşap işlerini gerçeğe çeviriyoruz.</p>
-            <a href="/hizmetler" class="font-bold text-[var(--primary-color)] hover:underline self-start">Daha Fazla Bilgi →</a>
-        </div>
-    </div>
-</div>
-
-<div class="swiper-slide group h-auto">
-    <div class="flex flex-col bg-white p-6 rounded-lg shadow-lg h-full">
-        <div class="overflow-hidden rounded-lg mb-4">
-            <img 
-                src="/image/6.webp" 
-                alt="Modern Ahşap İşleri" 
-                class="w-full h-64 object-cover group-hover:scale-125 transition-transform duration-300 ease-in-out"
-            />
-        </div>
-        <div class="flex flex-col flex-grow">
-            <h3 class="text-xl font-semibold mb-2">Dolaplar</h3>
-            <p class="text-gray-600 mb-4 flex-grow">25 yıllık tecrübemizi modern tasarım anlayışıyla birleştirerek hayalinizdeki ahşap işlerini gerçeğe çeviriyoruz.</p>
-            <a href="/hizmetler" class="font-bold text-[var(--primary-color)] hover:underline self-start">Daha Fazla Bilgi →</a>
-        </div>
-    </div>
-</div>
-                    </div>
-
-
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-      </section>
-
-      <div class="container mx-auto px-4 py-16 " data-animate-children="slide-up">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Müşteri Yorumları</h2>
-          <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Hizmetlerimizden memnun kalan müşterilerimizin görüşleri
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <div class="flex items-center mb-4">
-              <img src="https://i.pravatar.cc/100?u=ahmet" alt="Ahmet Yılmaz" class="w-12 h-12 rounded-full mr-4 object-cover" />
-              <div><h4 class="font-bold text-gray-800">Ahmet Yılmaz</h4></div>
-            </div>
-            <p class="text-gray-600">"Evinin tadilatını Çitlembik Dekorasyon'a yaptırdım. Her şey beklentilerimin çok üstündeydi."</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <div class="flex items-center mb-4">
-              <img src="/image/7.webp" alt="Elif Demir" class="w-12 h-12 rounded-full mr-4 object-cover" />
-              <div><h4 class="font-bold text-gray-800">Elif Demir</h4></div>
-            </div>
-            <p class="text-gray-600">"Profesyonel yaklaşımı ve detaylara olan özeniyle çok memnun kaldım. Her şey zamanında ve bütçeye uygun şekilde tamamlandı."</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <div class="flex items-center mb-4">
-              <img src="/image/8.webp" alt="Mehmet Kaya" class="w-12 h-12 rounded-full mr-4 object-cover" />
-              <div><h4 class="font-bold text-gray-800">Mehmet Kaya</h4></div>
-            </div>
-            <p class="text-gray-600">"Evinin her köşesini yeniden tasarlamaları harikaydı. Artık evime çok daha fazla değer veriyorum. Teşekkürler Çitlembik!"</p>
-          </div>
-        </div>
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">
+          Başlıca Hizmetlerimiz
+        </h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Hayalinizdeki mekanları gerçeğe dönüştürmek için sunduğumuz
+          profesyonel çözümler.
+        </p>
       </div>
 
-
-     <div class="container mx-auto px-4 py-16" data-animate-children="slide-up">
-
-        <div class="flex items-center mb-4">
-
-          <div class="w-6 h-6 bg-black mr-2"></div>
-
-          <p class="text-sm tracking-widest">Blog</p>
-
-        </div>
-
-        <div class="flex justify-between items-center mb-12">
-
-          <h1 class="text-5xl font-bold">Popüler Yazılar</h1>
-
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <div class="flex flex-col">
-
-            <img
-
-              alt="Modern kırmızı kanepeli, koyu gri duvarlı ve ahşap panelli şık bir oturma odası."
-
-              class="w-full h-80 object-cover mb-6"
-
-              src={""}
-
-            />
-
-            <h2 class="text-2xl font-semibold mb-4">Batı Tarzı Ev Dekorasyonları</h2>
-
-            <p class="text-gray-600 mb-6 flex-grow">
-
-              Özel mobilya tasarımlarımız, zarafeti işlevsellikle birleştirerek
- eviniz için zamansız parçalar yaratır.
-
-            </p>
-
-            <a
-
-              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
-
-              href="#">Dahasını Oku</a
-
-            >
-
-          </div>
-
-          <div class="flex flex-col">
-
-            <img
-
-              alt="Hardal sarısı kanepeli, modern avizeli ve bitkili bohem tarzı bir oturma odası."
-
-              class="w-full h-80 object-cover mb-6"
-
-              src={""}
-
-            />
-
-            <h2 class="text-2xl font-semibold mb-4">
-
-             Çitlembik Dekorasyon Özel Tasarım Mobilya yapım süreci 
-
-            </h2>
-
-            <p class="text-gray-600 mb-6 flex-grow">
-
-              Yarattığımız her parça, mekanınızı zahmetsizce tamamlamak için
-
-hazırlanmış bir sanat ve fayda birleşimidir.
-
-            </p>
-
-            <a
-
-              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
-
-              href="#">Dahasını Oku</a
-
-            >
-
-          </div>
-
-          <div class="flex flex-col">
-
-            <img
-
-              alt="Yeşil kanepeli, sarı örtülü ve galeri duvarlı minimalist bir oturma odası."
-
-              class="w-full h-80 object-cover mb-6"
-
-                            src={""}
-
-            />
-
-            <h2 class="text-2xl font-semibold mb-4">
-
-             Ev yenilemesinde dikkat edilecekler 
-
-            </h2>
-
-            <p class="text-gray-600 mb-6 flex-grow">
-
-              Misyonumuz, sadece çarpıcı görünmekle kalmayıp aynı zamanda
-
-ihtiyaçlarınıza kusursuz bir şekilde hizmet eden mobilyalar
-
-tasarlamaktır.
-
-            </p>
-
-            <a
-
-              class="text-sm font-semibold tracking-widest border-b-2 border-gray-800 pb-1 self-start"
-
-              href="#">Dahasını Oku</a
-
-            >
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      
-<div class="relative flex min-h-screen items-center justify-center overflow-hidden" data-animate="slide-up">
-
-  <div 
-    class="absolute scale-125 inset-0 bg-cover bg-center"  
-    style="background-image: url(/image/hakkımızda.png);"
-  ></div>
-
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-
-  <div class="relative w-full px-4 py-12 text-center">
-    <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-      Hakkımızda
-    </h1>
-    <p class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-      25 yıldır süregelen tecrübemizle, tasarımın sadece görsel bir yönü olmadığını; yaşam kalitenizi artıran, ihtiyaçlarınıza özel çözümler ürettiğimizi biliyoruz. Deneyimli tasarımcı ekibimiz, yaratıcılığı işlevsellikle harmanlayarak, her projeye özgün ve kişiye özel çözümler sunar.
-    </p>
-    <div class="mt-10">
-      <a href="/hakkimizda" class="inline-block bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--text-primary)] hover:text-white transition-colors py-3 px-8 rounded-md font-medium text-lg">
-        Daha Fazla Bilgi
-      </a>
+      <div class="swiper servicesSwiper relative !pb-16">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/1.png"
+                  alt="A' dan Z'ye Ev dekorasyon"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  A' dan Z'ye Ev dekorasyon
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Fikirlerinizi dinliyor, ihtiyaçlarınıza özel, estetik ve
+                  fonksiyonel tasarımlar hazırlıyoruz.
+                </p>
+                <a
+                  href="/hizmetler/adan-zye-dekorasyon"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/2.png"
+                  alt="3 Boyutlu Tasarım"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  3 Boyutlu Tasarım
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Projenizin gereksinimlerine en uygun, uzun ömürlü ve kaliteli
+                  malzemeleri özenle seçiyoruz.
+                </p>
+                <a
+                  href="/hizmetler"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/3.png"
+                  alt="Mobilya Üretim Ve Tasarım"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  Mobilya Üretim Ve Tasarım
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Onaylanan tasarımları, en kaliteli malzemelerle atölyemizde
+                  hayata geçiriyoruz.
+                </p>
+                <a
+                  href="/hizmetler/ozel-mobilya-tasarimi"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/4.png"
+                  alt="Özel Dolap Tasarım Ve Üretim"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  Özel Dolap Tasarım
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Üretimin her aşamasında titiz bir kalite kontrol süreci
+                  uygulayarak kusursuz ürünler ortaya çıkarıyoruz.
+                </p>
+                <a
+                  href="/hizmetler"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/5.png"
+                  alt="Yatak Tasarım Ve Üretim"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  Yatak Tasarım Ve Üretim
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Ürünlerinizi özenle paketliyor, adresinize teslim ediyor ve
+                  profesyonel montajını gerçekleştiriyoruz.
+                </p>
+                <a
+                  href="/hizmetler"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide group h-auto">
+            <div
+              class="flex flex-col bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              <div class="overflow-hidden rounded-lg mb-4 h-48">
+                <img
+                  src="/svg/6.png"
+                  alt="Ahşap İşleri"
+                  class="w-full h-full object-contain transition-transform duration-300 ease-in-out"
+                />
+              </div>
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                  Ahşap İşleri
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Teslimat sonrası her türlü sorunuz ve ihtiyacınız için
+                  yanınızda olmaya devam ediyoruz.
+                </p>
+                <a
+                  href="/hizmetler/modern-ahsap-isleri"
+                  class="font-bold text-[var(--primary-color)] hover:underline self-start"
+                  >Daha Fazla Bilgi →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-</div>
+  <section class="py-16 md:py-24 bg-gray-50" data-animate="slide-up">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">Neden Çitlembik Dekorasyon?</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">25 yıllık tecrübe, kalite ve müşteri memnuniyetini bir araya getiriyoruz.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" data-animate-children="slide-up">
+        <div class="p-8">
+          <img src="/svg/manufacture.png" alt="Tecrübe" class="h-20 w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Tecrübe ve Uzmanlık</h3>
+          <p class="text-gray-600">Çeyrek asırlık tecrübemizle, her projeye değer katıyor, mekanlarınıza özel çözümler sunuyoruz.</p>
+        </div>
+        <div class="p-8">
+          <img src="/svg/office-desk.png" alt="Kalite" class="h-20 w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Kaliteli Malzeme ve İşçilik</h3>
+          <p class="text-gray-600">En iyi malzemeleri özenle seçiyor, usta işçilikle birleştirerek uzun ömürlü ve estetik ürünler yaratıyoruz.</p>
+        </div>
+        <div class="p-8">
+          <img src="/svg/delivery-truck.png" alt="Müşteri Odaklılık" class="h-20 w-20 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Müşteri Odaklı Yaklaşım</h3>
+          <p class="text-gray-600">Sürecin her adımında sizi dinliyor, hayallerinizi gerçeğe dönüştürmek için şeffaf ve titiz çalışıyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <Form />
-      <Footer data-animate="slide-up" />
+  <section
+    class="relative py-24 md:py-32 bg-fixed bg-cover bg-center"
+    style="background-image: url(/image/hakkımızda.png);"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative container mx-auto px-4 text-center text-white">
+      <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">Hakkımızda</h2>
+      <p
+        class="mt-6 max-w-3xl mx-auto text-lg leading-8"
+        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);"
+      >
+        25 yıldır süregelen tecrübemizle, tasarımın sadece görsel bir yönü
+        olmadığını; yaşam kalitenizi artıran, ihtiyaçlarınıza özel çözümler
+        ürettiğimizi biliyoruz. 
+      </p>
+      <div class="mt-10">
+        <a
+          href="/hakkimizda"
+          class="inline-block bg-white text-gray-800 hover:bg-gray-200 transition-colors py-3 px-8 rounded-md font-semibold text-lg"
+        >
+          Daha Fazla Bilgi
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      
-      <script is:inline>
-function initializePageAnimations() {
-          
-          // --- 1. Hizmetler Swiper'ı Başlat ---
-          if (document.querySelector('.servicesSwiper')) {
-            new Swiper('.servicesSwiper', {
-              // Varsayılan (en küçük ekran) için 1 öğe
-              slidesPerView: 1,
-              spaceBetween: 20,
-              loop: true,
-              autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-              },
-              pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-              },
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              // Responsive ayarlar
-              breakpoints: {
-                // 640px ve üzeri ekranlar için (mobil)
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                // 1024px ve üzeri ekranlar için (desktop)
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
-              },
-            });
+  <section class="py-16 md:py-24 bg-white" data-animate="slide-up">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">Projelerimizden Kareler</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">İlham veren tasarımlar ve tamamladığımız projelerden bazıları.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-animate-children="slide-up">
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/1.webp" alt="Proje 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/2.webp" alt="Proje 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/3.webp" alt="Proje 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/4.webp" alt="Proje 4" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/5.webp" alt="Proje 5" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/6.webp" alt="Proje 6" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/7.webp" alt="Proje 7" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg group">
+          <img src="/image/8.webp" alt="Proje 8" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">
+          Müşteri Yorumları
+        </h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Hizmetlerimizden memnun kalan müşterilerimizin görüşleri.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-children="slide-up">
+        <div
+          class="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <div class="flex items-center mb-4">
+            <img
+              src="https://i.pravatar.cc/100?u=ahmet"
+              alt="Ahmet Yılmaz"
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+            />
+            <div>
+              <h4 class="font-bold text-gray-800">Ahmet Yılmaz</h4>
+            </div>
+          </div>
+          <p class="text-gray-600">
+            "Evinin tadilatını Çitlembik Dekorasyon'a yaptırdım. Her şey
+            beklentilerimin çok üstündeydi."
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <div class="flex items-center mb-4">
+            <img
+              src="/image/7.webp"
+              alt="Elif Demir"
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+            />
+            <div>
+              <h4 class="font-bold text-gray-800">Elif Demir</h4>
+            </div>
+          </div>
+          <p class="text-gray-600">
+            "Profesyonel yaklaşımı ve detaylara olan özeniyle çok memnun kaldım.
+            Her şey zamanında ve bütçeye uygun şekilde tamamlandı."
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          <div class="flex items-center mb-4">
+            <img
+              src="/image/8.webp"
+              alt="Mehmet Kaya"
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+            />
+            <div>
+              <h4 class="font-bold text-gray-800">Mehmet Kaya</h4>
+            </div>
+          </div>
+          <p class="text-gray-600">
+            "Evinin her köşesini yeniden tasarlamaları harikaydı. Artık evime
+            çok daha fazla değer veriyorum. Teşekkürler Çitlembik!"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Form />
+  <Footer />
+
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (document.querySelector(".servicesSwiper")) {
+        new Swiper(".servicesSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+        });
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.hasAttribute('data-animate-children')) {
+              entry.target.classList.add('animate-children');
+            } else {
+              entry.target.classList.add('animate-slide-up');
+            }
+            observer.unobserve(entry.target);
           }
+        });
+      }, { threshold: 0.1 });
 
-          // --- 2. Scroll-Reveal Animasyonları (data-animate) ---
-          const elementsToAnimate = document.querySelectorAll('[data-animate="slide-up"], [data-animate-children="slide-up"]');
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('animate-slide-up');
-                if (entry.target.hasAttribute('data-animate-children')) {
-                  setTimeout(() => entry.target.classList.add('animate-children'), 100);
-                }
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1 });
-          elementsToAnimate.forEach(element => observer.observe(element));
+      document.querySelectorAll('[data-animate="slide-up"], [data-animate-children="slide-up"]').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 
-          // --- 3. Hero Yazı Animasyonu ---
-          const heroTitleLines = document.querySelectorAll('.typewriter-line');
-          if (heroTitleLines.length > 0 && !heroTitleLines[0].classList.contains('animated')) {
-            heroTitleLines.forEach(line => line.classList.add('animated'));
-            heroTitleLines.forEach(line => {
-              line.style.width = '0'; line.style.overflow = 'hidden'; line.style.whiteSpace = 'nowrap'; line.textContent = ''; 
-            });
-            setTimeout(() => {
-              heroTitleLines.forEach((line, index) => {
-                const text = line.getAttribute('data-text'); line.textContent = text;
-                const duration = 1500; const delay = index * 500;
-                setTimeout(() => {
-                  line.style.transition = `width ${duration}ms steps(40, end)`; line.style.width = '100%';
-                  setTimeout(() => {
-                    line.style.width = 'auto'; line.style.overflow = 'visible'; line.style.whiteSpace = 'normal';
-                  }, duration);
-                }, delay);
-              });
-            }, 500);
-          }
-        }
-        document.addEventListener('astro:page-load', initializePageAnimations);
-      </script>
-
-      <style>
-        .servicesSwiper .swiper-pagination-bullet-active { background-color: var(--primary-color) !important; }
-        .servicesSwiper .swiper-button-next, .servicesSwiper .swiper-button-prev { color: black !important; }
-        .servicesSwiper .swiper-button-next::after, .servicesSwiper .swiper-button-prev::after { font-size: 2rem !important; font-weight: bold; }
-      </style>
-
-    </body>
-  </html>
+  <style>
+    .servicesSwiper .swiper-pagination-bullet-active {
+      background-color: var(--primary-color) !important;
+    }
+    .servicesSwiper .swiper-button-next,
+    .servicesSwiper .swiper-button-prev {
+      color: black !important;
+    }
+    .servicesSwiper .swiper-button-next::after,
+    .servicesSwiper .swiper-button-prev::after {
+      font-size: 2rem !important;
+      font-weight: bold;
+    }
+  </style>
 </Layout>
