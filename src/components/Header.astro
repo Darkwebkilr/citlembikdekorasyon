@@ -51,7 +51,7 @@
     const openMobileMenu = () => {
       mobileMenu.classList.remove('hidden');
       mobileMenuBackdrop.classList.remove('hidden');
-      setTimeout(() => mobileMenu.classList.remove('opacity-0'), 2);
+      setTimeout(() => mobileMenu.classList.remove('opacity-0'), 1);
     };
 
     const closeMobileMenu = () => {
@@ -59,7 +59,7 @@
       setTimeout(() => {
         mobileMenu.classList.add('hidden');
         mobileMenuBackdrop.classList.add('hidden');
-      }, 10);
+      }, 1);
     };
 
     menuToggle.addEventListener('click', openMobileMenu);
