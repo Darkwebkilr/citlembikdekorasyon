@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+import Form from '../../components/Form.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const pageTitle = `${entry.data.title} | Blog - Çitlembik Dekorasyon`;
+---
+
+<Layout title={pageTitle} description={entry.data.description} image={entry.data.heroImage}>
+  <main class="pt-20">
+    <article>
+      <!-- Hero Section -->
+      <section class="relative py-24 md:py-32 bg-cover bg-center" style={`background-image: url(${entry.data.heroImage})`}>
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative container mx-auto px-4 text-center text-white">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">{entry.data.title}</h1>
+          <div class="flex items-center justify-center text-sm text-gray-300">
+            <span>{entry.data.pubDate.toLocaleDateString('tr-TR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span class="mx-2">•</span>
+            <span>{entry.data.readTime}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="prose lg:prose-xl max-w-4xl mx-auto prose-p:text-lg prose-p:leading-relaxed prose-headings:font-bold prose-headings:tracking-wide prose-headings:text-gray-900 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-img:rounded-xl prose-img:shadow-lg prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h1:mb-6 prose-h2:mb-5 prose-h3:mb-4">
+            <Content />
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <Form />
+  </main>
+  <Footer />
+</Layout>

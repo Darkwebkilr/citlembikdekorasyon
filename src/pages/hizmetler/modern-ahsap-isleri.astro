@@ -1,19 +1,82 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
+import Form from "../../components/Form.astro";
+
+const pageTitle = "Modern Ahşap İşleri ve Dekorasyon Çözümleri | Çitlembik Dekorasyon";
+const description = "Ahşabın sıcaklığını modern tasarımlarla birleştiriyoruz. Duvar panelleri, tavan kaplamaları, merdivenler ve daha fazlası için özel ahşap işleri çözümleri.";
 ---
 
-<Layout title="Modern Ahşap İşleri - Çitlembik Dekorasyon">
-  <div class="container mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold text-center mb-8">Modern Ahşap İşleri</h1>
-    <div class="prose lg:prose-xl mx-auto">
-      <p>
-        Ahşabın sıcaklığını modern tasarımlarla birleştiriyoruz. 25 yıllık tecrübemizle, mekanlarınıza değer katacak, estetik ve dayanıklı ahşap çözümleri sunuyoruz.
-      </p>
-      <p>
-        Özgün tasarımlar ve kaliteli işçilik için doğru adrestesiniz.
-      </p>
-    </div>
-  </div>
+<Layout title={pageTitle} description={description}>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1632282134592-4713b137428c?q=80&w=1974&auto=format&fit=crop')">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative container mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">{pageTitle}</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">{description}</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          
+          <div class="prose lg:prose-xl max-w-none mb-12">
+            <h2 class="text-3xl font-serif mb-4">Doğallık ve Estetiğin Buluşma Noktası</h2>
+            <p>Ahşap, mekanlara sıcaklık, doğallık ve zamansız bir şıklık katan eşsiz bir malzemedir. Çitlembik Dekorasyon olarak, ahşabın bu otantik dokusunu modern tasarım anlayışıyla birleştirerek yaşam alanlarınıza sanatsal bir dokunuş katıyoruz. Duvarlardan tavanlara, merdivenlerden dekoratif objelere kadar geniş bir yelpazede, mekana özel ahşap işleri üretiyoruz.</p>
+            
+            <h3 class="text-2xl font-serif mt-8 mb-4">Modern Ahşap Uygulama Alanlarımız</h3>
+            <p>Ahşabın çok yönlülüğünü kullanarak, her mekana uygun çözümler sunuyoruz:</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+            <img src="https://images.unsplash.com/photo-1555696353-3ac7a638cc1a?q=80&w=1964&auto=format&fit=crop" alt="Oturma odasında modern tasarımlı ahşap duvar paneli uygulaması" class="rounded-lg shadow-xl w-full h-auto object-cover order-last md:order-first">
+            <div class="prose lg:prose-xl max-w-none">
+              <ul class="list-disc pl-6 space-y-3">
+                <li>
+                  <strong>Ahşap Duvar Panelleri:</strong> Düz veya üç boyutlu tasarımlarla duvarlarınıza derinlik ve karakter kazandırın.
+                </li>
+                <li>
+                  <strong>Tavan Kaplamaları:</strong> Monoton tavanları, ahşap kirişler veya panellerle mekanın odak noktası haline getirin.
+                </li>
+                <li>
+                  <strong>Dekoratif Seperatörler:</strong> Açık alanları estetik bir şekilde bölmek için kullanılan şık ve fonksiyonel ahşap seperatörler.
+                </li>
+                <li>
+                  <strong>Özel Tasarım Merdivenler:</strong> Mekanınızın mimarisine uygun, modern ve güvenli ahşap merdiven tasarımları.
+                </li>
+                 <li>
+                  <strong>Ahşap Lambri ve Süpürgelikler:</strong> Detaylarda gizli olan şıklığı, modern ahşap lambri ve süpürgeliklerle tamamlayın.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="prose lg:prose-xl max-w-none mt-12">
+            <h3 class="text-2xl font-serif mt-8 mb-4">Neden Ahşap Dekorasyon?</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Sıcak ve Davetkar Atmosfer:</strong> Ahşap, bulunduğu ortama anında sıcaklık ve samimiyet katar.</li>
+                <li><strong>Dayanıklılık ve Uzun Ömür:</strong> Doğru malzeme ve işçilikle, ahşap uygulamalar yıllara meydan okur.</li>
+                <li><strong>Akustik Performans:</strong> Ahşap, ses yalıtımına yardımcı olarak daha huzurlu mekanlar yaratır.</li>
+                <li><strong>Ekolojik ve Sürdürülebilir:</strong> Doğal bir malzeme olan ahşap, çevre dostu bir dekorasyon seçeneğidir.</li>
+            </ul>
+          </div>
+
+          <div class="text-center mt-16">
+            <h2 class="text-3xl font-serif mb-4">Mekanınıza Sanatsal Bir Dokunuş</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-8">Modern ahşap işleri ile mekanlarınıza değer katmak ve fark yaratmak için projenizi birlikte şekillendirelim.</p>
+            <a href="/iletisim" class="inline-block bg-[var(--primary-color)] text-white hover:bg-[var(--accent-color)] transition-colors py-3 px-8 rounded-md font-semibold text-lg">
+              Projeniz İçin Bize Ulaşın
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <Form />
+  </main>
   <Footer />
 </Layout>

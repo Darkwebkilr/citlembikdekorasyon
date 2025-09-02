@@ -1,182 +1,62 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import Buttons from "../components/Buttons.astro";
-import Header from "../components/Header.astro";
-import Bg from "../components/Bg.astro";
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Form from '../components/Form.astro';
 
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
-<Layout title="Blog | Çitlembik Dekorasyon">
-<Buttons/>
-<Bg />
-      <div
-        class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-      >
-        <main class="flex-grow mt-20">
-          <!-- Blog Başlık -->
-          <section class="relative  py-20 md:py-32 bg-[#202020]">
-            <div class="container mx-auto px-4 text-center">
-              <h1 class="text-4xl text-white md:text-6xl font-bold mb-6">İç Tasarım Blogu</h1>
-              <p class="text-xl max-w-3xl mx-auto text-[var(--text-secondary)]">
-                Ev dekorasyonu, mobilya tasarımı ve yaşam alanı düzenleme ile ilgili en yeni trendler, ipuçları ve öneriler
-              </p>
-            </div>
-          </section>
-
-          <!-- Blog Yazıları -->
-          <section class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- Blog Yazısı 1 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Modern Salon Tasarımları" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>15 Mayıs 2025</span>
-                    <span class="mx-2">•</span>
-                    <span>5 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">2025'in En Popüler Modern Salon Tasarımları</h2>
-                  <p class="text-gray-600 mb-4">
-                    Bu yılın en gözde salon tasarım trendleri arasında doğal dokular, toprak tonları ve çok yönlü mobilyalar öne çıkıyor.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-
-              <!-- Blog Yazısı 2 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Mutfak Dekorasyonu" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>2 Nisan 2025</span>
-                    <span class="mx-2">•</span>
-                    <span>4 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">Küçük Mutfaklar İçin 7 Akıllıca Depolama Çözümü</h2>
-                  <p class="text-gray-600 mb-4">
-                    Alan kısıtlaması olan mutfaklarda maksimum verimlilik elde etmek için uygulanabilecek pratik ve şık çözümler.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-
-              <!-- Blog Yazısı 3 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Yatak Odası Tasarımı" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>20 Mart 2025</span>
-                    <span class="mx-2">•</span>
-                    <span>6 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">Rahatlık ve Stil: Minimalist Yatak Odası Tasarımı</h2>
-                  <p class="text-gray-600 mb-4">
-                    Huzurlu bir uyku ve zarif bir görünüm için minimalist yatak odası tasarımında dikkat edilmesi gereken temel unsurlar.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-
-              <!-- Blog Yazısı 4 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1600194996164-009281c4043b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Ofis Tasarımı" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>5 Şubat 2025</span>
-                    <span class="mx-2">•</span>
-                    <span>5 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">Evde Ofis: Verimliliği Artıran Tasarım İpuçları</h2>
-                  <p class="text-gray-600 mb-4">
-                    Evden çalışan profesyoneller için odaklanmayı ve üretkenliği artıracak ev ofisi düzenleme önerileri.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-
-              <!-- Blog Yazısı 5 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Bahçe Dekorasyonu" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>12 Ocak 2025</span>
-                    <span class="mx-2">•</span>
-                    <span>4 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">Kış Bahçesi: Soğuk Aylarda Bahçenizi Canlandırmak</h2>
-                  <p class="text-gray-600 mb-4">
-                    Kış aylarında bile balkon ve teraslarınızı yeşillendirmek ve canlandırmak için kullanabileceğiniz yöntemler.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-
-              <!-- Blog Yazısı 6 -->
-              <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
-                  alt="Aydınlatma Tasarımı" 
-                  class="w-full h-60 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center text-sm text-gray-500 mb-3">
-                    <span>30 Kasım 2024</span>
-                    <span class="mx-2">•</span>
-                    <span>5 dakika okuma</span>
-                  </div>
-                  <h2 class="text-2xl font-bold mb-3">Mood Aydınlatma: Mekanlara Karizma Kazandırmak</h2>
-                  <p class="text-gray-600 mb-4">
-                    Doğru aydınlatma seçimi ile mekanlarınıza sıcaklık ve karakter katmak için kullanabileceğiniz teknikler.
-                  </p>
-                  <a href="#" class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
-                    Devamını oku →
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <!-- Sayfalama -->
-            <div class="flex justify-center mt-12">
-              <nav class="flex items-center space-x-2">
-                <a href="#" class="px-4 py-2 rounded-md bg-[var(--accent-color)] text-[var(--text-primary)] font-medium">1</a>
-                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">2</a>
-                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">3</a>
-                <a href="#" class="px-4 py-2 rounded-md hover:bg-[var(--accent-color)] transition-colors">Sonraki →</a>
-              </nav>
-            </div>
-          </section>
-        </main>
+<Layout title="Blog | Çitlembik Dekorasyon" description="Ev dekorasyonu, mobilya tasarımı ve yaşam alanı düzenleme ile ilgili en yeni trendler, ipuçları ve ilham veren fikirler.">
+  <main class="pt-20">
+    <!-- Blog Header -->
+    <section class="relative py-20 md:py-32 bg-[#202020]">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl text-white md:text-6xl font-bold mb-6">İç Tasarım Blogu</h1>
+        <p class="text-xl max-w-3xl mx-auto text-gray-300">
+          Ev dekorasyonu, mobilya tasarımı ve yaşam alanı düzenleme ile ilgili en yeni trendler, ipuçları ve öneriler.
+        </p>
       </div>
-    <Footer />
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map(post => (
+          <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <a href={`/blog/${post.slug}`}>
+              <img 
+                src={post.data.heroImage}
+                alt={post.data.title}
+                class="w-full h-60 object-cover"
+              />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>{post.data.pubDate.toLocaleDateString('tr-TR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                <span class="mx-2">•</span>
+                <span>{post.data.readTime}</span>
+              </div>
+              <h2 class="text-2xl font-bold mb-3 flex-grow">
+                <a href={`/blog/${post.slug}`} class="hover:text-[var(--accent-color)] transition-colors">
+                  {post.data.title}
+                </a>
+              </h2>
+              <p class="text-gray-600 mb-4">
+                {post.data.description}
+              </p>
+              <a href={`/blog/${post.slug}`} class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                Devamını oku →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+    
+    <Form />
+  </main>
+  <Footer />
 </Layout>

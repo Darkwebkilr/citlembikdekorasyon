@@ -1,19 +1,72 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
+import Form from "../../components/Form.astro";
+
+const pageTitle = "Kişiye Özel Mobilya Tasarımı ve Üretimi | Çitlembik Dekorasyon";
+const description = "Hayalinizdeki mobilyaları gerçeğe dönüştürüyoruz. Çitlembik Dekorasyon olarak, mekana ve zevkinize özel, kaliteli ve estetik mobilya tasarımları sunuyoruz.";
 ---
 
-<Layout title="Özel Mobilya Tasarımı - Çitlembik Dekorasyon">
-  <div class="container mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold text-center mb-8">Özel Mobilya Tasarımı</h1>
-    <div class="prose lg:prose-xl mx-auto">
-      <p>
-        Mekanlarınıza özel, estetik ve fonksiyonel mobilya tasarımları sunuyoruz. Hayalinizdeki mobilyaları, kaliteli malzemeler ve usta işçilikle hayata geçiriyoruz.
-      </p>
-      <p>
-        Detaylı bilgi ve projelendirme için bizimle iletişime geçebilirsiniz.
-      </p>
-    </div>
-  </div>
+<Layout title={pageTitle} description={description}>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1593697821252-0c9137d9fc45?q=80&w=2070&auto=format&fit=crop')">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative container mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">{pageTitle}</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">{description}</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          
+          <div class="prose lg:prose-xl max-w-none mb-12">
+            <h2 class="text-3xl font-serif mb-4">Hayallerinizi Şekillendiriyoruz</h2>
+            <p>Standart ölçüler ve tasarımlar mekanınıza uyum sağlamadığında, Çitlembik Dekorasyon'un kişiye özel mobilya tasarım hizmeti devreye girer. 25 yıllık tecrübemizle, sadece size özel, estetik ve fonksiyonel mobilyalar üreterek yaşam alanlarınıza benzersiz bir kimlik kazandırıyoruz. Her detayı sizin zevkinize ve ihtiyaçlarınıza göre şekillendiriyoruz.</p>
+            
+            <h3 class="text-2xl font-serif mt-8 mb-4">Özel Mobilya Tasarım Sürecimiz</h3>
+            <p>Mükemmelliğe giden yol, detaylı bir planlamadan geçer. Sürecimiz şu adımlardan oluşur:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Keşif ve Danışmanlık:</strong> Sizi dinliyor, ihtiyaçlarınızı anlıyor ve mekanınızda ölçüler alıyoruz.</li>
+              <li><strong>Tasarım ve 3D Modelleme:</strong> Fikirlerinizi üç boyutlu olarak görselleştirerek, üretime geçmeden önce mobilyanızın bitmiş halini görmenizi sağlıyoruz.</li>
+              <li><strong>Malzeme Seçimi:</strong> Masif ahşaptan modern lake kaplamalara, en kaliteli ve uzun ömürlü malzemeleri birlikte seçiyoruz.</li>
+              <li><strong>Usta İşçilikle Üretim:</strong> Alanında uzman ustalarımız, tasarımı büyük bir titizlikle hayata geçirir.</li>
+              <li><strong>Teslimat ve Montaj:</strong> Mobilyalarınızı zamanında teslim ediyor ve mekanınıza profesyonelce monte ediyoruz.</li>
+            </ul>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+            <div class="prose lg:prose-xl max-w-none">
+              <h3 class="text-2xl font-serif mb-4">Ürettiğimiz Mobilya Çeşitleri</h3>
+              <p>Hayal gücünüzle sınırlı olanaklar sunuyoruz:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Gardırop ve Giyinme Odaları</li>
+                <li>Mutfak ve Banyo Dolapları</li>
+                <li>TV Üniteleri ve Kitaplıklar</li>
+                <li>Yemek ve Çalışma Masaları</li>
+                <li>Orta Sehpalar ve Konsollar</li>
+                <li>Ofis Mobilyaları</li>
+              </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1780&auto=format&fit=crop" alt="Modern ve şık bir oturma odası için özel olarak tasarlanmış TV ünitesi ve kitaplık" class="rounded-lg shadow-xl w-full h-auto object-cover">
+          </div>
+
+          <div class="text-center mt-16">
+            <h2 class="text-3xl font-serif mb-4">Mekanınıza Değer Katın</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-8">Sıradan çözümlerle yetinmeyin. Size özel tasarlanmış mobilyalarla yaşam alanlarınızı kişiselleştirin.</p>
+            <a href="/iletisim" class="inline-block bg-[var(--primary-color)] text-white hover:bg-[var(--accent-color)] transition-colors py-3 px-8 rounded-md font-semibold text-lg">
+              Ücretsiz Keşif ve Teklif Alın
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <Form />
+  </main>
   <Footer />
 </Layout>

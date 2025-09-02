@@ -1,19 +1,83 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
+import Form from "../../components/Form.astro";
+
+const pageTitle = "A'dan Z'ye Anahtar Teslim Dekorasyon ve Tadilat | Çitlembik Dekorasyon";
+const description = "Evinizi veya ofisinizi baştan yaratıyoruz. A'dan Z'ye anahtar teslim dekorasyon hizmetimizle tasarım, planlama ve uygulama süreçlerini sizin için yönetiyoruz.";
 ---
 
-<Layout title="A'dan Z'ye Dekorasyon - Çitlembik Dekorasyon">
-  <div class="container mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold text-center mb-8">A'dan Z'ye Dekorasyon</h1>
-    <div class="prose lg:prose-xl mx-auto">
-      <p>
-        Yaşam alanlarınızı baştan sona yeniliyoruz. Konsept belirlemeden, mobilya seçimine, renk paletinden, aksesuar detaylarına kadar her aşamada yanınızdayız.
-      </p>
-      <p>
-        Anahtar teslim dekorasyon çözümlerimizle, size sadece keyfini sürmek kalır.
-      </p>
-    </div>
-  </div>
+<Layout title={pageTitle} description={description}>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1572023099062-838b5a03a463?q=80&w=2070&auto=format&fit=crop')">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative container mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">{pageTitle}</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">{description}</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          
+          <div class="prose lg:prose-xl max-w-none mb-12">
+            <h2 class="text-3xl font-serif mb-4">Hayalinizdeki Mekanlar, Tek Bir Adımda</h2>
+            <p>Komple bir ev veya ofis tadilatı gözünüzü mü korkutuyor? Farklı ustalarla uğraşmak, malzeme seçimi, zamanlama gibi karmaşık süreçlerle yorulmak istemiyorsanız, A'dan Z'ye anahtar teslim dekorasyon hizmetimiz tam size göre. Çitlembik Dekorasyon olarak, tüm süreci sizin için tek bir elden yönetiyor, hayalinizdeki mekanı stressiz bir şekilde size teslim ediyoruz.</p>
+            
+            <h3 class="text-2xl font-serif mt-8 mb-4">Anahtar Teslim Hizmet Neleri Kapsar?</h3>
+            <p>Bu hizmetimizle, mekanınızın yenilenmesi için gereken her şeyi biz üstleniyoruz:</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+            <div class="prose lg:prose-xl max-w-none">
+              <ul class="list-disc pl-6 space-y-3">
+                <li><strong>Tasarım ve Projelendirme:</strong> Mekanınıza özel iç mimari tasarım ve 3D görselleştirme.</li>
+                <li><strong>Kırım ve Yıkım İşleri:</strong> Mevcut yapının güvenli ve planlı bir şekilde sökülmesi.</li>
+                <li><strong>Altyapı ve Tesisat:</strong> Elektrik ve su tesisatının yenilenmesi veya düzenlenmesi.</li>
+                <li><strong>Zemin ve Duvar Uygulamaları:</strong> Parke, seramik, boya, duvar kağıdı gibi tüm yüzeylerin yenilenmesi.</li>
+                <li><strong>Asma Tavan ve Aydınlatma:</strong> Modern aydınlatma çözümleri ve alçıpan uygulamaları.</li>
+                <li><strong>Mobilya Üretimi ve Montajı:</strong> Tasarıma uygun, kişiye özel mobilyaların üretilmesi ve montajı.</li>
+                <li><strong>İnce İşler ve Montaj:</strong> Kapı, pencere, süpürgelik ve diğer tüm detayların montajı.</li>
+                <li><strong>Temizlik ve Teslimat:</strong> Proje sonrası detaylı temizlik yapılarak mekanın kullanıma hazır halde teslim edilmesi.</li>
+              </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" alt="Anahtar teslim proje kapsamında yenilenen modern ve aydınlık bir mutfak" class="rounded-lg shadow-xl w-full h-auto object-cover">
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg shadow-inner mt-12">
+              <h3 class="text-2xl font-serif text-center mb-4">Neden Anahtar Teslim Çözüm?</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                  <div>
+                      <h4 class="font-bold text-lg mb-2">Tek Muhatap</h4>
+                      <p class="text-gray-600">Tüm süreç boyunca sadece proje yöneticimizle iletişim kurarak karmaşadan kurtulursunuz.</p>
+                  </div>
+                  <div>
+                      <h4 class="font-bold text-lg mb-2">Zaman ve Maliyet Avantajı</h4>
+                      <p class="text-gray-600">Profesyonel planlama sayesinde proje zamanında ve bütçenizi aşmadan tamamlanır.</p>
+                  </div>
+                  <div>
+                      <h4 class="font-bold text-lg mb-2">Garantili İşçilik</h4>
+                      <p class="text-gray-600">Tüm işçilik ve uygulamalarımız Çitlembik Dekorasyon garantisi altındadır.</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="text-center mt-16">
+            <h2 class="text-3xl font-serif mb-4">Siz Hayal Edin, Biz Gerçekleştirelim</h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-8">Tadilat ve dekorasyon süreçlerinin yükünü omuzlarınızdan alıyoruz. Bize ulaşın, projenizi konuşalım.</p>
+            <a href="/iletisim" class="inline-block bg-[var(--primary-color)] text-white hover:bg-[var(--accent-color)] transition-colors py-3 px-8 rounded-md font-semibold text-lg">
+              Anahtar Teslim Teklif Alın
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <Form />
+  </main>
   <Footer />
 </Layout>

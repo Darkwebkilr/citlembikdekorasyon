@@ -1,13 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Form from "../components/Form.astro";
 import {feature} from "../types";
 
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<Layout title="Çitlembik Dekorasyon">
+<Layout title="Çitlembik Dekorasyon" showBg={false}>
 <Hero />
 
 
@@ -41,8 +45,9 @@ import {feature} from "../types";
         <div class="flex flex-col flex-grow">
           <h3 class="text-xl font-semibold mb-2 text-gray-800">{f.title}</h3>
           <p class="text-gray-600 mb-4 flex-grow">{f.description}</p>
-          <span class="font-bold text-[var(--primary-color)] hover:underline">
-            Daha Fazla Bilgi →
+          <span class="font-bold text-[var(--primary-color)] inline-flex items-center">
+            <span class="relative after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">Daha Fazla Bilgi</span>
+            <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
           </span>
         </div>
       </div>
@@ -113,34 +118,79 @@ import {feature} from "../types";
   <section class="py-16 md:py-24 bg-white" data-animate="slide-up">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">Projelerimizden Kareler</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">Galeri</h2>
         <p class="mt-4 text-gray-600 max-w-2xl mx-auto">İlham veren tasarımlar ve tamamladığımız projelerden bazıları.</p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-animate-children="slide-up">
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/1.webp" alt="Proje 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/2.webp" alt="Proje 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/3.webp" alt="Proje 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/4.webp" alt="Proje 4" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/5.webp" alt="Proje 5" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/6.webp" alt="Proje 6" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/7.webp" alt="Proje 7" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
-        <div class="overflow-hidden rounded-lg shadow-lg group">
+        <div class="overflow-hidden rounded-lg shadow-lg group gallery-item cursor-pointer">
           <img src="/image/8.webp" alt="Proje 8" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white" data-animate="slide-up">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-serif">Son Blog Yazıları</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Tasarım dünyasından en son haberler, ipuçları ve ilham veren fikirler.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-animate-children="slide-up">
+        {posts.map(post => (
+          <article class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <a href={`/blog/${post.slug}`}>
+              <img 
+                src={post.data.heroImage}
+                alt={post.data.title}
+                class="w-full h-60 object-cover"
+              />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>{post.data.pubDate.toLocaleDateString('tr-TR', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                <span class="mx-2">•</span>
+                <span>{post.data.readTime}</span>
+              </div>
+              <h2 class="text-2xl font-bold mb-3 flex-grow">
+                <a href={`/blog/${post.slug}`} class="hover:text-[var(--accent-color)] transition-colors">
+                  {post.data.title}
+                </a>
+              </h2>
+              <p class="text-gray-600 mb-4">
+                {post.data.description}
+              </p>
+              <a href={`/blog/${post.slug}`} class="text-[var(--accent-color)] font-medium hover:text-[var(--text-primary)] transition-colors">
+                Devamını oku →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <a href="/blog" class="inline-block bg-[var(--primary-color)] text-white hover:bg-[var(--accent-color)] transition-colors py-3 px-8 rounded-md font-semibold text-lg">
+          Tüm Yazıları Gör
+        </a>
       </div>
     </div>
   </section>
@@ -285,4 +335,83 @@ import {feature} from "../types";
       font-weight: bold;
     }
   </style>
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-[999] transition-opacity duration-300 opacity-0">
+  <button id="lightbox-close" class="absolute top-5 right-8 text-white text-5xl font-bold hover:scale-110 transition-transform">&times;</button>
+  <button id="lightbox-prev" class="absolute left-8 top-1/2 -translate-y-1/2 text-white text-4xl font-bold bg-black/20 p-2 rounded-full hover:bg-black/50 transition-colors">&#10094;</button>
+  <button id="lightbox-next" class="absolute right-8 top-1/2 -translate-y-1/2 text-white text-4xl font-bold bg-black/20 p-2 rounded-full hover:bg-black/50 transition-colors">&#10095;</button>
+  <img id="lightbox-img" src="" alt="Genişletilmiş Proje Fotoğrafı" class="max-w-[90vw] max-h-[85vh] object-contain">
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Lightbox Gallery
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+
+    if (galleryItems.length > 0 && lightbox) {
+      const galleryImageSrcs = Array.from(galleryItems).map(item => item.querySelector('img').src);
+      let currentIndex = 0;
+
+      function showLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = galleryImageSrcs[currentIndex];
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+      }
+
+      function hideLightbox() {
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+        }, 300);
+      }
+
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % galleryImageSrcs.length;
+        lightboxImg.src = galleryImageSrcs[currentIndex];
+      }
+
+      function showPrevImage() {
+        currentIndex = (currentIndex - 1 + galleryImageSrcs.length) % galleryImageSrcs.length;
+        lightboxImg.src = galleryImageSrcs[currentIndex];
+      }
+
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          showLightbox(index);
+        });
+      });
+
+      lightboxClose.addEventListener('click', hideLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          hideLightbox();
+        }
+      });
+      lightboxNext.addEventListener('click', showNextImage);
+      lightboxPrev.addEventListener('click', showPrevImage);
+
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') {
+          hideLightbox();
+        }
+        if (e.key === 'ArrowRight') {
+          showNextImage();
+        }
+        if (e.key === 'ArrowLeft') {
+          showPrevImage();
+        }
+      });
+    }
+  });
+</script>
+
 </Layout>

@@ -63,30 +63,45 @@ const slideImages = [
     const heroTitleLines = document.querySelectorAll('.typewriter-line');
     if (!heroTitleLines.length) return;
     
+    // Reset lines for re-animation
     heroTitleLines.forEach(line => {
       line.textContent = '';
       line.style.width = '0';
       line.style.transition = 'none';
+      line.style.whiteSpace = 'nowrap';
+      line.style.overflow = 'hidden';
     });
 
+    // Start animation after a short delay
     setTimeout(() => {
-      heroTitleLines.forEach((line, index) => {
+      let cumulativeDelay = 0;
+      heroTitleLines.forEach((line) => {
         const text = line.getAttribute('data-text');
+        const textLength = text.length;
+        
+        // Duration based on text length for a more natural feel
+        // Adjust the multiplier (e.g., 50) to speed up/slow down typing
+        const duration = textLength * 50; 
+
         line.textContent = text;
-        const duration = 1500;
-        const delay = index * 500;
 
         setTimeout(() => {
-          line.style.transition = `width ${duration}ms steps(40, end)`;
+          line.style.transition = `width ${duration}ms steps(${textLength}, end)`;
           line.style.width = '100%';
+          
+          // After typing animation finishes, set width to auto
           setTimeout(() => {
             line.style.width = 'auto';
             line.style.overflow = 'visible';
             line.style.whiteSpace = 'normal';
           }, duration);
-        }, delay);
+
+        }, cumulativeDelay);
+        
+        // Add current line's duration + a pause to the cumulative delay
+        cumulativeDelay += duration + 200; // 200ms pause between lines
       });
-    }, 100);
+    }, 200); // 200ms initial delay before starting the whole animation
   }
 
   function initializeHero() {

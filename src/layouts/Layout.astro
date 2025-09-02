@@ -1,49 +1,48 @@
 ---
 import Header from "../components/Header.astro"; // Eklendi
 import Buttons from "../components/Buttons.astro"; // Eklendi
+import Bg from "../components/Bg.astro"; // Eklendi
 import "../styles/global.css";
+import { SEO } from "astro-seo";
+
 
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  showBg?: boolean;
 }
 
 const {
   title,
   description = "Çitlembik Dekorasyon - A dan z ye dekorason ve yenileme, Özel Tasarım Mobilyalar ve daha fazlası ",
+  image = "/image/Logo.png",
+  showBg = true,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="tr">
   <head>
-    <meta charset="utf-8" />
+    <SEO
+      title={title}
+      description={description}
+      charset="utf-8"
+      canonical="https://www.citlembikdekorasyon.com"
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: image,
+        },
+      }}
+    />
     <link rel="icon" type="image/png" href="/image/Logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content="dekorasyon, iç mimarlık, tasarım, çitlembik, tadilat, mobilya"
-    />
-    <meta name="author" content="Çitlembik Dekorasyon" />
-
-    <link rel="canonical" />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/image/Logo.png" />
-    <meta property="og:site_name" content="Çitlembik Dekorasyon" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/image/Logo.png" />
   </head>
   <body>
+    {showBg && <Bg />}
     <Header />
     <Buttons />
     <slot />
