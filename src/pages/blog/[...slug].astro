@@ -13,10 +13,12 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 const pageTitle = `${entry.data.title} | Blog - Çitlembik Dekorasyon`;
 ---
-
+<style>
+    
+</style>
 <Layout title={pageTitle} description={entry.data.description} image={entry.data.heroImage}>
   <main class="pt-20">
     <article>
@@ -30,13 +32,34 @@ const pageTitle = `${entry.data.title} | Blog - Çitlembik Dekorasyon`;
             <span class="mx-2">•</span>
             <span>{entry.data.readTime}</span>
           </div>
+            <div class="text-white">
+                        <a href="/"><span class="hover:underline">Anasayfa</span></a>
+                        <span class="mx-1">/</span>
+                        <a href="/blog"> <span class="hover:underline">Blog</span></a>
+                        <span class="mx-1">/</span>
+                        <span class="hover:underline">{entry.data.title}</span>
+                    </div>
         </div>
       </section>
+      <section class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">İçerik Başlıkları</h2>
+            <ul class="max-w-2xl mx-auto list-disc list-inside space-y-2">
+                {headings.map(heading => (
+                    <li class={`ml-${(heading.depth - 2) * 4}`}>
+                        <a href={`#${heading.slug}`} class="text-blue-600 hover:underline">
+                            {heading.text}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </section> 
 
       <!-- Content Section -->
       <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-          <div class="prose lg:prose-xl max-w-4xl mx-auto prose-p:text-lg prose-p:leading-relaxed prose-headings:font-bold prose-headings:tracking-wide prose-headings:text-gray-900 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-img:rounded-xl prose-img:shadow-lg prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h1:mb-6 prose-h2:mb-5 prose-h3:mb-4">
+          <div id="content" class="max-w-4xl mx-auto prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-img:rounded-xl prose-img:shadow-lg prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h1:mb-6 prose-h2:mb-5 prose-h3:mb-4">
             <Content />
           </div>
         </div>
@@ -47,3 +70,16 @@ const pageTitle = `${entry.data.title} | Blog - Çitlembik Dekorasyon`;
   </main>
   <Footer />
 </Layout>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+    let cont = document.querySelectorAll("p");
+    let head = document.querySelectorAll("h3")
+    cont.forEach(p => {
+        p.classList.add("text-lg", "lg:text-2xl", "leading-relaxed");
+    })
+    head.forEach(p => {
+        p.classList.add("font-bold", "tracking-wide", "text-gray-900", "mt-10", "mb-6", "text-2xl", "lg:text-4xl")
+    })
+})
+</script>
